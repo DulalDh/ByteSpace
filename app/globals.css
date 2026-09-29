@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root { --blue: #073fe5; --lime: #ceff00; --ink: #141a2b; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #fff; color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+button, input { font: inherit; }
+.grid-bg { background-color: #073fe5; background-image: linear-gradient(#ffffff16 1px, transparent 1px), linear-gradient(90deg, #ffffff16 1px, transparent 1px); background-size: 162px 162px; }
+/* Keep the grid visible over the lime hero disc, as it is in the reference. */
+.hero-glow { background-color: #073fe5; background-image: radial-gradient(ellipse at 50% 112%, #ceff00 0 39%, transparent 39.2%), linear-gradient(#ffffff16 1px, transparent 1px), linear-gradient(90deg, #ffffff16 1px, transparent 1px); background-size: auto, 162px 162px, 162px 162px; }
+.soft-glow { background: radial-gradient(ellipse at 17% 25%, #e5ff8a 0, transparent 27%), radial-gradient(ellipse at 91% 22%, #e9edff 0, transparent 32%), radial-gradient(ellipse at 18% 89%, #e2e8ff 0, transparent 23%), #fbfcf8; }
+.floaty { animation: float 5s ease-in-out infinite; }
+@keyframes float { 0%,100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-10px) rotate(0deg); } }
+.course-card { transition: transform .2s ease, box-shadow .2s ease; }
+.course-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px #17255414; }
+@media (max-width: 767px) {
+  .hero-glow { min-height: 650px; }
+}
+::selection { background: #ceff00; color: #111827; }
