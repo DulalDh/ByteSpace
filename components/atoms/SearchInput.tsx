@@ -27,7 +27,7 @@ export function SearchInput({
       )}
       <input
         aria-label={label}
-        className={`h-full min-w-0 flex-1 bg-transparent text-slate-700 outline-none placeholder:text-slate-400 ${compact ? "px-3 text-[10px]" : "px-3 text-base md:text-[24px]"} ${className}`}
+        className={`h-full min-w-0 flex-1 bg-transparent text-slate-700 outline-none placeholder:text-slate-400 ${compact ? "px-3 text-xs" : "px-3 text-base md:text-[24px]"} ${className}`}
         {...inputProps}
       />
     </div>

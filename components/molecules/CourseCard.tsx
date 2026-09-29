@@ -20,7 +20,7 @@ export function CourseCard({ course, students }: CourseCardProps) {
         <div className="flex items-start justify-between gap-3">
           <div>
             <h3 className="text-sm font-bold">{course.title}</h3>
-            <p className="mt-1 text-[10px] text-blue-600">By {course.teacher}</p>
+            <p className="mt-1 text-xs text-blue-600">By {course.teacher}</p>
           </div>
           <span className="shrink-0 text-[10px] text-slate-500">★ 4.5</span>
         </div>
@@ -33,8 +33,8 @@ export function CourseCard({ course, students }: CourseCardProps) {
           </div>
           <span className="text-[9px] text-slate-400">+{course.students}</span>
         </div>
-        <p className="mt-2 text-xs font-bold text-blue-600">
-          {course.price}<span className="text-[9px] font-normal text-slate-400"> / lifetime</span>
+        <p className="mt-2 text-[14.4px] font-bold text-blue-600">
+          {course.price}<span className="text-[11px] font-normal text-slate-400"> / lifetime</span>
         </p>
       </div>
     </article>

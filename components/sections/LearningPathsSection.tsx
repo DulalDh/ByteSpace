@@ -5,7 +5,7 @@ export function LearningPathsSection() {
     <section className="mx-auto max-w-7xl px-5 pb-16 md:px-10 md:pb-20">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-2xl font-extrabold tracking-tight md:text-3xl">Explore Diverse Learning Paths at ByteSpace</h2>
-        <p className="mt-3 text-xs leading-5 text-slate-400">At ByteSpace, we believe in empowering individuals through knowledge. Our diverse range of courses spans various fields, ensuring there’s something for everyone.</p>
+        <p className="mt-3 text-[14.4px] leading-6 text-slate-400">At ByteSpace, we believe in empowering individuals through knowledge. Our diverse range of courses spans various fields, ensuring there’s something for everyone.</p>
       </div>
       <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
         {learningPaths.map(({ icon, title }) => (
