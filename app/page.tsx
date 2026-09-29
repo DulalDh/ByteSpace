@@ -13,7 +13,9 @@ import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { TrustedPartnersSection } from "@/components/sections/TrustedPartnersSection";
 
 export default function HomePage() {
-  const [activeCategory, setActiveCategory] = useState<string>(CourseCategory.Featured);
+  const [activeCategory, setActiveCategory] = useState<string>(
+    CourseCategory.Featured,
+  );
   const [query, setQuery] = useState("");
 
   const visibleCourses = useMemo(() => {
@@ -24,7 +26,8 @@ export default function HomePage() {
         activeCategory === CourseCategory.Featured ||
         course.category === activeCategory ||
         course.title.toLowerCase().includes(activeCategory.toLowerCase());
-      const searchableText = `${course.title} ${course.category} ${course.teacher}`.toLowerCase();
+      const searchableText =
+        `${course.title} ${course.category} ${course.teacher}`.toLowerCase();
 
       return matchesCategory && searchableText.includes(normalizedQuery);
     });
