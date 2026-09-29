@@ -16,18 +16,20 @@ export function SiteFooter() {
             newsletter.
           </p>
           <form
-            className="mt-4 flex h-9 max-w-sm rounded-full border border-slate-200"
+            className="mt-4 flex h-10 max-w-sm items-center gap-2"
             onSubmit={(event) => event.preventDefault()}
           >
-            <SearchInput
-              label="Your email"
-              type="email"
-              name="email"
-              placeholder="Enter your email"
-              autoComplete="email"
-              compact
-            />
-            <button className="rounded-full bg-[#ceff00] px-4 py-2 text-[10px] font-bold">
+            <div className="flex h-full min-w-0 flex-1 items-center rounded-full border border-slate-200 px-2">
+              <SearchInput
+                label="Your email"
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                autoComplete="email"
+                compact
+              />
+            </div>
+            <button className="h-full shrink-0 rounded-full bg-[#ceff00] px-4 text-[10px] font-bold">
               Search
             </button>
           </form>
