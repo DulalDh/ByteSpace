@@ -1,5 +1,6 @@
 import { Brand } from "@/components/molecules/Brand";
 import { copy } from "@/data/home-data.js";
+import Link from "next/link";
 
 export function SiteHeader() {
   return (
@@ -17,7 +18,7 @@ export function SiteHeader() {
           <a href="#creators">{copy.nav.creators}</a>
         </nav>
         <div className="flex items-center gap-3 text-[10px] sm:gap-4 sm:text-[11px] md:gap-7 md:text-[16px]">
-          <a href="#footer">{copy.nav.signIn}</a>
+          <Link href="/login">{copy.nav.signIn}</Link>
           <a
             className="rounded-full px-3 py-1.5 md:px-4 md:py-2"
             href="#footer"
