@@ -9,21 +9,21 @@ function SocialIcon({ kind }: { kind: "facebook" | "google" }) {
     <svg
       viewBox="0 0 24 24"
       aria-hidden="true"
-      className="h-8 w-8 fill-current max-[600px]:h-[38px] max-[600px]:w-[38px]"
+      className="block h-8 w-8 shrink-0 fill-current max-[600px]:h-[38px] max-[600px]:w-[38px]"
     >
-      <path d="M13.55 21v-8.2h2.76l.41-3.2h-3.17V7.56c0-.93.26-1.56 1.59-1.56h1.7V3.14c-.3-.04-1.32-.14-2.51-.14-2.49 0-4.2 1.52-4.2 4.31V9.6H7.31v3.2h2.82V21h3.42Z" />
-      <path d="M12 1.4a10.6 10.6 0 1 0 0 21.2 10.6 10.6 0 0 0 0-21.2Zm0 2a8.6 8.6 0 1 1 0 17.2 8.6 8.6 0 0 1 0-17.2Z" />
+      <path fill="#1877F2" d="M12 1.4a10.6 10.6 0 1 0 0 21.2 10.6 10.6 0 0 0 0-21.2Z" />
+      <path fill="#fff" d="M13.55 21v-8.2h2.76l.41-3.2h-3.17V7.56c0-.93.26-1.56 1.59-1.56h1.7V3.14c-.3-.04-1.32-.14-2.51-.14-2.49 0-4.2 1.52-4.2 4.31V9.6H7.31v3.2h2.82V21h3.42Z" />
     </svg>
   ) : (
     <svg
       viewBox="0 0 24 24"
       aria-hidden="true"
-      className="h-8 w-8 fill-current max-[600px]:h-[38px] max-[600px]:w-[38px]"
+      className="block h-8 w-8 shrink-0 fill-current max-[600px]:h-[38px] max-[600px]:w-[38px]"
     >
-      <path d="M12.24 10.2v3.9h5.42a4.8 4.8 0 0 1-1.98 3.12l3.2 2.48c1.87-1.72 2.95-4.25 2.95-7.25 0-.69-.06-1.35-.18-1.99H12.24v-.26Z" />
-      <path d="M12.24 22c2.7 0 4.97-.9 6.63-2.3l-3.2-2.48c-.9.61-2.06.98-3.43.98-2.63 0-4.86-1.77-5.66-4.15l-3.3 2.55A10 10 0 0 0 12.24 22Z" />
-      <path d="M6.58 14.05a6.02 6.02 0 0 1 0-3.84l-3.3-2.55a10 10 0 0 0 0 8.94l3.3-2.55Z" />
-      <path d="M12.24 6.06c1.47 0 2.79.5 3.83 1.52l2.87-2.87C17.2 3.07 14.94 2 12.24 2a10 10 0 0 0-8.96 5.66l3.3 2.55c.8-2.38 3.03-4.15 5.66-4.15Z" />
+      <path fill="#4285F4" d="M12.24 10.2v3.9h5.42a4.8 4.8 0 0 1-1.98 3.12l3.2 2.48c1.87-1.72 2.95-4.25 2.95-7.25 0-.69-.06-1.35-.18-1.99H12.24v-.26Z" />
+      <path fill="#34A853" d="M12.24 22c2.7 0 4.97-.9 6.63-2.3l-3.2-2.48c-.9.61-2.06.98-3.43.98-2.63 0-4.86-1.77-5.66-4.15l-3.3 2.55A10 10 0 0 0 12.24 22Z" />
+      <path fill="#FBBC05" d="M6.58 14.05a6.02 6.02 0 0 1 0-3.84l-3.3-2.55a10 10 0 0 0 0 8.94l3.3-2.55Z" />
+      <path fill="#EA4335" d="M12.24 6.06c1.47 0 2.79.5 3.83 1.52l2.87-2.87C17.2 3.07 14.94 2 12.24 2a10 10 0 0 0-8.96 5.66l3.3 2.55c.8-2.38 3.03-4.15 5.66-4.15Z" />
     </svg>
   );
 }
@@ -51,7 +51,7 @@ export function LoginPage() {
       id="home"
       className="isolate min-h-svh overflow-x-clip bg-transparent text-white min-[1101px]:h-svh min-[1101px]:overflow-hidden before:pointer-events-none before:fixed before:inset-0 before:-z-10 before:bg-[#0641e8] before:bg-[length:122px_122px] before:bg-[image:linear-gradient(#ffffff20_2px,transparent_2px),linear-gradient(90deg,#ffffff20_2px,transparent_2px)] before:content-['']"
     >
-      <div className="grid min-h-svh w-full grid-cols-2 items-center min-[1101px]:h-svh max-[1100px]:mx-auto max-[1100px]:w-[min(calc(100%_-_48px),900px)] max-[1100px]:grid-cols-1 max-[1100px]:gap-8 max-[1100px]:px-0 max-[1100px]:pt-6 max-[1100px]:pb-[5vh] max-[600px]:w-[calc(100%_-_32px)] max-[600px]:gap-4 max-[600px]:pt-[18px]">
+      <div className="grid min-h-svh w-full grid-cols-2 items-center min-[1101px]:h-svh max-[1100px]:mx-auto max-[1100px]:w-[min(calc(100%_-_48px),900px)] max-[1100px]:grid-cols-1 max-[1100px]:gap-8 max-[1100px]:px-0 max-[1100px]:pt-6 max-[1100px]:pb-[5vh] max-[600px]:w-[calc(100%_-_32px)] max-[600px]:gap-8 max-[600px]:pt-[18px]">
         <section
           className="relative min-h-svh min-w-0 pb-[15vh] pl-[clamp(32px,8.4vw,164px)] pr-6 max-[1100px]:min-h-0 max-[1100px]:p-0"
           aria-label="About ByteSpace"
@@ -73,8 +73,8 @@ export function LoginPage() {
             </p>
           </div>
 
-          <div className="relative mt-[clamp(24px,8.8vh,112px)] h-[clamp(360px,39.2vh,501px)] w-full max-w-[656px] max-[1100px]:mt-8 max-[1100px]:h-[208px] max-[1100px]:w-[min(54%,460px)] max-[600px]:mt-6 max-[600px]:h-[200px] max-[600px]:w-[min(76%,340px)]">
-            <div className="relative h-[650px] w-full origin-top-left scale-[0.77] [@media(max-height:800px)]:scale-[0.6] max-[1100px]:h-[270px] max-[600px]:h-[260px]">
+          <div className="relative mt-[clamp(24px,8.8vh,112px)] h-[clamp(360px,39.2vh,501px)] w-full max-w-[656px] max-[1100px]:mt-8 max-[1100px]:h-[340px] max-[1100px]:w-full max-[1100px]:max-w-none max-[600px]:mt-6 max-[600px]:h-[340px]">
+            <div className="relative h-[650px] w-full origin-top-left scale-[0.77] min-[1101px]:[@media(max-height:800px)]:scale-[0.6] max-[1100px]:h-[340px] max-[1100px]:scale-100 max-[600px]:h-[340px]">
               <div className="absolute top-[120px] left-0 z-[1] w-[86%] max-[1100px]:top-[55px] max-[1100px]:w-3/4 max-[600px]:w-[86%]">
                 <CourseCard
                   course={courses[1]}
@@ -112,10 +112,10 @@ export function LoginPage() {
         </section>
 
         <section
-          className="relative flex h-[min(66.4vh,850px)] min-h-[680px] max-w-[786px] items-stretch justify-center justify-self-stretch self-end mx-[clamp(18px,1.4vw,27px)] mr-[clamp(32px,8.4vw,164px)] mb-[5vh] ml-[clamp(18px,1.4vw,27px)] rounded-[32px] bg-white text-[#242529] max-[1100px]:mx-auto max-[1100px]:mb-0 max-[1100px]:h-[608px] max-[1100px]:min-h-0 max-[1100px]:w-full max-[600px]:h-[520px] max-[600px]:rounded-[24px]"
+          className="relative flex h-[min(66.4vh,850px)] min-h-[680px] max-w-[786px] items-stretch justify-center justify-self-stretch self-end mx-[clamp(18px,1.4vw,27px)] mr-[clamp(32px,8.4vw,164px)] mb-[5vh] ml-[clamp(18px,1.4vw,27px)] rounded-[32px] bg-white text-[#242529] max-[1100px]:mx-auto max-[1100px]:mb-0 max-[1100px]:h-[608px] max-[1100px]:min-h-0 max-[1100px]:w-full max-[600px]:h-auto max-[600px]:min-h-[520px] max-[600px]:rounded-[24px]"
           aria-labelledby="welcome-heading"
         >
-          <div className="relative h-full w-[min(614px,calc(100%_-_112px))] pt-[67px] max-[1100px]:w-[min(614px,calc(100%_-_80px))] max-[1100px]:pt-[50px] max-[600px]:w-[calc(100%_-_48px)] max-[600px]:pt-[10px]">
+          <div className="relative h-full w-[min(614px,calc(100%_-_112px))] pt-[67px] max-[1100px]:w-[min(614px,calc(100%_-_80px))] max-[1100px]:pt-[50px] max-[600px]:h-auto max-[600px]:w-[calc(100%_-_48px)] max-[600px]:py-6">
             <p className="m-0 text-[24px] leading-[1.3] text-[#164bff] max-[600px]:text-[18px]">
               Sign In
             </p>
@@ -154,12 +154,12 @@ export function LoginPage() {
               </button>
             </form>
 
-            <div className="absolute top-[69%] right-0 left-0 flex items-center gap-4 text-[20px] text-[#999] max-[1100px]:top-[68%] max-[600px]:top-[71%]">
+            <div className="absolute top-[69%] right-0 left-0 flex items-center gap-4 text-[20px] text-[#999] max-[1100px]:top-[68%] max-[600px]:static max-[600px]:mt-7">
               <span className="h-px flex-1 bg-[#d8d8d8]" />
               <span>or</span>
               <span className="h-px flex-1 bg-[#d8d8d8]" />
             </div>
-            <div className="absolute top-[76%] right-0 left-0 flex justify-center gap-[22px] max-[1100px]:top-[76%] max-[600px]:top-[78%]">
+            <div className="absolute top-[76%] right-0 left-0 flex justify-center gap-[22px] max-[1100px]:top-[76%] max-[600px]:static max-[600px]:mt-5">
               <button
                 type="button"
                 aria-label="Continue with Facebook"
@@ -175,7 +175,7 @@ export function LoginPage() {
                 <SocialIcon kind="google" />
               </button>
             </div>
-            <p className="absolute right-0 bottom-[5.2%] left-0 m-0 text-center text-[20px] text-[#999] max-[600px]:bottom-[5%] max-[600px]:text-[15px]">
+            <p className="absolute right-0 bottom-[5.2%] left-0 m-0 text-center text-[20px] text-[#999] max-[600px]:static max-[600px]:mt-6 max-[600px]:text-[15px]">
               New user?{" "}
               <a href="#create-account" className="text-[#164bff] no-underline">
                 Create an account
