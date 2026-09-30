@@ -14,7 +14,7 @@ export function CourseSearch({ query, onQueryChange }: CourseSearchProps) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="relative z-30 mx-auto mt-5 flex h-[44px] w-full max-w-[780px] items-center gap-4 md:mt-[62px] md:h-[50px] md:gap-5"
+      className="relative z-30 mx-auto mt-5 flex h-[44px] w-full max-w-[580px] items-center gap-4 md:mt-[62px] md:h-[50px] md:gap-5"
     >
       <div className="flex h-full min-w-0 flex-1 items-center rounded-full bg-white px-6 shadow-[0_12px_35px_rgba(0,0,0,.2)] md:px-9">
         <SearchInput
