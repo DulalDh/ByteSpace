@@ -109,13 +109,6 @@ export const testimonials = [
     quote:
       "As a creator, ByteSpace has been a game-changer for me. The Course Editor is user-friendly, and the support from the community is incredible. It’s fulfilling to see my courses making a positive impact on learners globally.",
   },
-  {
-    name: "James L.",
-    role: "Lifelong Learner",
-    avatar: "photo-1500648767791-00dcc994a43e",
-    quote:
-      "I’ve had several online learning platforms, and ByteSpace stands out for its vibrant community and the variety of courses available. The easy navigation and engaging content make it a go-to platform for continuous skill development.",
-  },
 ];
 
 export const partnerNames = [
@@ -141,9 +134,8 @@ export const footerLinkGroups = [
   {
     links: [
       "Featured Courses",
+      "Featured Categories",
       "Business",
-      "Marketing",
-      "Photography",
       "IT",
       "Design",
     ],

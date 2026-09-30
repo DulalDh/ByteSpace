@@ -6,41 +6,42 @@ export function SiteFooter() {
   return (
     <footer
       id="footer"
-      className="border-t border-slate-100 bg-white px-5 py-10 md:px-10"
+      className="border-t border-slate-100 bg-white px-5 pb-6 pt-10 text-[#454545] md:px-[4.8vw] md:pb-7 md:pt-[67px]"
     >
-      <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.6fr_1fr]">
+      <div className="mx-auto grid w-full max-w-[1808px] gap-8 md:grid-cols-[1.05fr_1.25fr] md:gap-11">
         <div>
-          <Brand />
-          <p className="mt-4 max-w-sm text-xs leading-6 text-slate-500">
+          <div className="[&_a]:text-[21px] [&_svg]:h-7 [&_svg]:w-7">
+            <Brand />
+          </div>
+          <p className="mt-6 max-w-[760px] text-sm leading-5 text-[#555] md:mt-[22px] md:text-[14px] md:leading-[22px]">
             Stay up to date with our latest features and releases by joining our
             newsletter.
           </p>
           <form
-            className="mt-4 flex h-10 max-w-sm items-center gap-2"
+            className="mt-11 flex h-11 w-full max-w-[760px] items-center gap-6 md:mt-[45px] md:h-[45px] md:gap-6"
             onSubmit={(event) => event.preventDefault()}
           >
-            <div className="flex h-full min-w-0 flex-1 items-center rounded-full border border-slate-200 px-2">
+            <div className="flex h-full min-w-0 flex-1 items-center rounded-full border border-[#d6d8dc] px-5">
               <SearchInput
                 label="Your email"
                 type="email"
                 name="email"
                 placeholder="Enter your email"
                 autoComplete="email"
-                compact
               />
             </div>
-            <button className="h-full shrink-0 rounded-full bg-[#ceff00] px-4 text-xs font-bold">
+            <button className="h-full shrink-0 rounded-full bg-[#ceff00] px-6 text-[14px] font-medium">
               Search
             </button>
           </form>
-          <p className="mt-3 max-w-sm text-[10.8px] leading-5 text-slate-400">
+          <p className="mt-6 max-w-[720px] text-[11px] leading-5 text-[#555] md:mt-[22px] md:text-[11px] md:leading-5">
             By subscribing, you agree to our Privacy Policy and consent to
             receive updates from our company.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-6 text-xs text-slate-500 sm:grid-cols-3">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-6 pt-7 text-[13px] text-[#555] sm:grid-cols-3 md:pt-14 md:text-[14px]">
           {footerLinkGroups.map(({ links }, groupIndex) => (
-            <ul key={groupIndex} className="space-y-3">
+            <ul key={groupIndex} className="space-y-4">
               {links.map((link, linkIndex) => (
                 <li key={`${groupIndex}-${link}`}>
                   <a
@@ -59,9 +60,9 @@ export function SiteFooter() {
           ))}
         </div>
       </div>
-      <div className="mx-auto mt-10 flex max-w-7xl flex-wrap justify-between gap-3 border-t border-slate-100 pt-5 text-[11px] text-slate-400">
+      <div className="mx-auto mt-24 flex w-full max-w-[1808px] flex-wrap justify-between gap-3 border-t border-[#d6d8dc] pt-6 text-[11px] text-[#555] md:mt-[133px] md:pt-[26px]">
         <span>© 2023 ByteSpace. All rights reserved.</span>
-        <span className="flex gap-4">
+        <span className="flex gap-4 md:gap-6">
           <a href="#footer">Privacy Policy</a>
           <a href="#footer">Terms of Service</a>
           <a href="#footer">Cookie Settings</a>
