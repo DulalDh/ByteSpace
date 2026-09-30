@@ -1,3 +1,5 @@
+import { copy, partnerNames } from "@/data/home-data.js";
+
 const partnerMarks = [
   <svg key="wave" viewBox="0 0 40 40" aria-hidden="true">
     <circle cx="20" cy="20" r="20" fill="currentColor" />
@@ -29,12 +31,10 @@ const partnerMarks = [
   </svg>,
 ];
 
-const partnerNames = ["Logoipsum", "Logoipsum", "Logoipsum", "Logoipsum", "Logoipsum"];
-
 export function TrustedPartnersSection() {
   return (
     <section
-      aria-label="Trusted by teams"
+      aria-label={copy.partners.ariaLabel}
       className="flex min-h-54 flex-wrap items-center justify-center gap-x-10 gap-y-4 bg-[#F5F5F6] px-5 py-6 text-[#82868E] sm:gap-x-14"
     >
       {partnerNames.map((name, index) => (

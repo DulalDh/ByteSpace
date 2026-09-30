@@ -1,4 +1,4 @@
-import { testimonials } from "@/data/home-data.js";
+import { copy, testimonials } from "@/data/home-data.js";
 import { RemoteImage } from "@/components/atoms/RemoteImage";
 
 export function TestimonialsSection() {
@@ -14,15 +14,10 @@ export function TestimonialsSection() {
       <div className="mx-auto max-w-[1840px]">
         <div className="grid gap-7 md:grid-cols-[0.92fr_1fr] md:items-start md:gap-12">
           <h2 className="max-w-[620px] text-[27px] font-extrabold leading-[1.2] tracking-[-0.035em] text-[#111827] sm:text-[34px] lg:text-[44px]">
-            Discover What Our
-            <br />
-            Community Is Saying
+            {copy.testimonials.title}
           </h2>
           <p className="max-w-[850px] pt-1 text-[14px] leading-[1.8] text-[#4b5c75] sm:text-[15px] lg:text-[18px]">
-            At ByteSpace, our vibrant community of learners and creators is at
-            the heart of what we do. Hear directly from those who have
-            experienced the transformative journey of learning and creating on
-            our platform.
+            {copy.testimonials.description}
           </p>
         </div>
         <div className="mt-10 grid gap-5 md:mt-12 md:grid-cols-3">

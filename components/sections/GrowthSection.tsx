@@ -7,6 +7,7 @@ import {
 import { CourseCard } from "@/components/molecules/CourseCard";
 import { LearningProgressCard } from "@/components/molecules/LearningProgressCard";
 import { HappyStudentsCard } from "@/components/molecules/HappyStudentsCard";
+import { copy } from "@/data/home-data.js";
 
 export function GrowthSection() {
   return (
@@ -14,14 +15,10 @@ export function GrowthSection() {
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-11 md:grid-cols-2 md:px-10 md:py-[4.75rem] lg:gap-16 lg:py-[5rem]">
         <div>
           <h2 className="max-w-lg text-3xl font-extrabold leading-tight tracking-tight md:text-[44px]">
-            Your Path to Professional Growth Starts Here!
+            {copy.growth.title}
           </h2>
           <p className="mt-5 max-w-lg leading-7 text-slate-600 font-medium md:text-[18px]">
-            Explore our curated selection of courses tailored to enhance your
-            capabilities and accelerate your career journey. Whether you are
-            looking to sharpen specific skills, gain industry expertise, or
-            embark on a new career path entirely, we have the resources you
-            need.
+            {copy.growth.description}
           </p>
           <div className="mt-7 flex gap-8">
             {growthStats.map(({ value, label }) => (
@@ -45,7 +42,7 @@ export function GrowthSection() {
           </div>
           <img
             src="/hero-learner.png"
-            alt="Smiling learner studying on a laptop"
+            alt={copy.hero.learnerAlt}
             className="absolute bottom-[-30%] left-[10%] z-10 w-[700px] max-w-none drop-shadow-[0_30px_28px_rgba(15,23,42,0.28)]"
           />
           <LearningProgressCard
@@ -74,29 +71,29 @@ export function GrowthSection() {
           <div className="absolute inset-0 rounded-full bg-blue-100/70 blur-3xl" />
           <div className="absolute left-10 top-[2%] z-10 w-[40%] rounded-[18px] bg-blue-700 px-4 py-4 text-white shadow-lg sm:px-6 sm:py-5">
             <span className="block text-sm sm:text-lg text-[16px]">
-              Total Revenue
+              {copy.growth.revenue}
             </span>
             <span className="block text-xs text-white/70 text-[10px]">
-              July 1-28
+              {copy.growth.revenuePeriod}
             </span>
-            <b className="mt-2 block text-xl sm:text-[24px]">$120.29</b>
+            <b className="mt-2 block text-xl sm:text-[24px]">{copy.growth.revenueAmount}</b>
             <div className="mt-3 h-2.5 overflow-hidden rounded-full bg-white">
               <div className="h-full w-[68%] rounded-full bg-[#ceff00]" />
             </div>
           </div>
           <div className="absolute left-10 top-[32%] z-10 w-[25%] rounded-[18px] bg-blue-700 px-4 py-4 text-white shadow-lg sm:px-6 sm:py-5">
-            <span className="block text-[16px]">Year to Date</span>
+            <span className="block text-[16px]">{copy.growth.yearToDate}</span>
             <span className="block text-xs text-white/70 text-[10px]">
-              2023
+              {copy.growth.year}
             </span>
-            <b className="mt-2 block text-[24px]">$1,200.38</b>
+            <b className="mt-2 block text-[24px]">{copy.growth.annualRevenue}</b>
             <span className="mt-3 inline-block rounded-full bg-[#ceff00] px-3 py-1 text-xs font-semibold text-slate-900">
-              +12$
+              {copy.growth.increase}
             </span>
           </div>
           <img
             src="/manage-courses.png"
-            alt="Creator managing courses on a tablet"
+            alt={copy.growth.creatorImageAlt}
             className="absolute bottom-[-15%] left-[13%] z-[11] h-100%] w-[100%] object-contain object-bottom drop-shadow-[0_24px_24px_rgba(15,23,42,0.24)]"
           />
           <HappyStudentsCard className="absolute bottom-[30%] right-0 z-20" />
@@ -117,13 +114,10 @@ export function GrowthSection() {
         </div>
         <div className="relative z-10">
           <h2 className="max-w-xl text-3xl font-extrabold leading-tight tracking-tight md:text-[44px]">
-            Create &amp; Manage
-            <br />
-            Courses Easily.
+            {copy.growth.creatorTitle}
           </h2>
           <p className="mt-6 max-w-xl text-base leading-7 text-slate-600 md:mt-8 md:text-[18px] md:leading-8">
-            ByteSpace supports individuals or entities in the creation,
-            publication, and administration of educational courses.
+            {copy.growth.creatorDescription}
           </p>
           <ul className="mt-7 space-y-4 text-base md:mt-9 md:text-[18px]">
             {creatorBenefits.map((benefit) => (

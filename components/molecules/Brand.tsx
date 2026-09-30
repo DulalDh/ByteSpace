@@ -1,3 +1,5 @@
+import { copy } from "@/data/home-data.js";
+
 interface BrandProps {
   light?: boolean;
 }
@@ -26,7 +28,7 @@ export function Brand({ light = false }: BrandProps) {
           fill="#D4FB20"
         />
       </svg>
-      <span className="leading-none bold">ByteSpace</span>
+      <span className="leading-none bold">{copy.brand}</span>
     </a>
   );
 }

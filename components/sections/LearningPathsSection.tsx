@@ -1,4 +1,4 @@
-import { learningPaths } from "@/data/home-data.js";
+import { copy, learningPaths } from "@/data/home-data.js";
 
 const learningPathIcons: Record<string, React.ReactNode> = {
   Design: (
@@ -51,13 +51,10 @@ export function LearningPathsSection() {
     <section className="mx-auto max-w-7xl px-5 pb-16 md:px-10 md:pb-20">
       <div className="mx-auto max-w-5xl text-center">
         <h2 className="text-2xl font-extrabold tracking-tight md:text-[44px]">
-          Explore Diverse Learning Paths at ByteSpace
+          {copy.learningPaths.title}
         </h2>
         <p className="mt-3 text-[18px] leading-6 text-slate-400">
-          At Bytespace, we believe in empowering individuals through knowledge.
-          Our diverse range of courses spans various fields, ensuring there's
-          something for everyone. Unleash your potential and explore our
-          carefully curated categories.
+          {copy.learningPaths.description}
         </p>
       </div>
       <div className="mt-16 grid grid-cols-2 gap-9 sm:grid-cols-3 lg:grid-cols-6">

@@ -1,5 +1,6 @@
 import type { Course, Testimonial } from "@/types/home";
 import { RemoteImage } from "@/components/atoms/RemoteImage";
+import { copy } from "@/data/home-data.js";
 
 interface CourseCardProps {
   course: Course;
@@ -24,10 +25,10 @@ export function CourseCard({
         />
         <div className="absolute bottom-2 left-2 flex gap-1.5 text-[12px] text-white">
           <span className={`rounded-full bg-black/55 px-2 py-1 ${featured ? "px-3 py-[6px] sm:px-4" : ""}`}>
-            {featured ? "17 Lessons" : "◷ 2 hours 10 mins"}
+            {featured ? copy.courseCard.featuredLessons : copy.courseCard.duration}
           </span>
           <span className={`rounded-full bg-black/55 px-2 py-1 ${featured ? "px-3 py-[6px] sm:px-4" : ""}`}>
-            {featured ? "2 hours 16 mins" : "▤ 50 Comments"}
+            {featured ? copy.courseCard.featuredDuration : copy.courseCard.comments}
           </span>
         </div>
       </div>
@@ -35,20 +36,20 @@ export function CourseCard({
         <div className="flex items-start justify-between gap-3">
           <div>
             <h3 className={`font-bold ${featured ? "text-[14px] tracking-tight sm:text-[18px] md:text-[20px]" : "text-[20px]"}`}>{course.title}</h3>
-            <p className={`mt-1 text-blue-600 ${featured ? "text-[13px] sm:text-[16px]" : "text-xs"}`}>By {course.teacher}</p>
+            <p className={`mt-1 text-blue-600 ${featured ? "text-[13px] sm:text-[16px]" : "text-xs"}`}>{copy.courseCard.teacher.replace("{teacher}", course.teacher)}</p>
           </div>
-          <span className={`shrink-0 text-slate-500 ${featured ? "hidden" : "text-[10px]"}`}>★ 4.5</span>
+          <span className={`shrink-0 text-slate-500 ${featured ? "hidden" : "text-[10px]"}`}>{copy.courseCard.rating}</span>
         </div>
         <div className={`mt-2 flex items-center gap-2 ${featured ? "sm:mt-4" : ""}`}>
           <span className={`rounded-full bg-slate-100 px-2 py-1 text-slate-600 ${featured ? "px-3 py-[6px] text-[10px] sm:px-4 sm:text-xs" : "text-[9px]"}`}>
-            ♧ Beginner
+            {copy.courseCard.level}
           </span>
           <div className={`flex -space-x-1.5 ${featured ? "hidden" : ""}`}>
             {students.map((student, index) => (
               <RemoteImage
                 key={`${student.name}-${index}`}
                 imageId={student.avatar}
-                alt="Course student"
+                alt={copy.courseCard.studentAlt}
                 className="h-5 w-5 rounded-full border-2 border-white object-cover"
               />
             ))}
@@ -58,8 +59,7 @@ export function CourseCard({
         <p className={`mt-1.5 font-bold text-blue-600 ${featured ? "text-[13px] sm:text-[15px]" : "text-[16px]"}`}>
           {course.price}
           <span className={`font-normal text-slate-400 ${featured ? "text-[13px] sm:text-[15px]" : "text-[14px]"}`}>
-            {" "}
-            / lifetime
+            {copy.courseCard.lifetime}
           </span>
         </p>
       </div>

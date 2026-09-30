@@ -3,6 +3,25 @@
 /** @typedef {import("../types/home").ExploreCategory} ExploreCategory */
 /** @typedef {import("../types/home").FooterLinkGroup} FooterLinkGroup */
 
+/** Shared interface copy used by every component. */
+export const copy = {
+  brand: "ByteSpace",
+  metadata: { title: "ByteSpace — Learn. Create. Grow.", description: "Discover practical courses and grow your skills with ByteSpace." },
+  nav: { label: "Main navigation", home: "Home", courses: "Courses", creators: "Creators", signIn: "Sign In", join: "Join Us", shoppingBag: "Shopping bag" },
+  search: { coursesLabel: "Search courses", coursePlaceholder: "Course, topic, creator", emailLabel: "Your email", emailPlaceholder: "Enter your email", button: "Search" },
+  hero: { title: "Get Access to Hundreds Courses Available", description: "Unlock your creativity, gain valuable knowledge, and grow your business with our wide range of courses.", learnerAlt: "Smiling learner studying on a laptop", category: "UI/UX Design", categoryStats: "200 Courses　•　1000+ Students" },
+  courseCard: { featuredLessons: "17 Lessons", featuredDuration: "2 hours 16 mins", duration: "◷ 2 hours 10 mins", comments: "▤ 50 Comments", teacher: "By {teacher}", rating: "★ 4.5", level: "♧ Beginner", lifetime: " / lifetime", studentAlt: "Course student" },
+  progress: { label: "Learning Progress", percentage: "55%" },
+  happyStudents: { label: "Happy Students", rating: "4.5 (240)", alt: "ByteSpace student", count: "2K+" },
+  courseSection: { title: "Discover Your Passion, Build Your Skills", description: "At ByteSpace Courses, we bring you close to life-changing knowledge. Explore a variety of courses across different fields, from technology to the arts, and make a difference in your career and life.", empty: "No courses found. Try a different search or category." },
+  learningPaths: { title: "Explore Diverse Learning Paths at ByteSpace", description: "At Bytespace, we believe in empowering individuals through knowledge. Our diverse range of courses spans various fields, ensuring there's something for everyone. Unleash your potential and explore our carefully curated categories." },
+  growth: { title: "Your Path to Professional Growth Starts Here!", description: "Explore our curated selection of courses tailored to enhance your capabilities and accelerate your career journey. Whether you are looking to sharpen specific skills, gain industry expertise, or embark on a new career path entirely, we have the resources you need.", revenue: "Total Revenue", revenuePeriod: "July 1-28", revenueAmount: "$120.29", yearToDate: "Year to Date", year: "2023", annualRevenue: "$1,200.38", increase: "+12$", creatorTitle: "Create & Manage Courses Easily.", creatorDescription: "ByteSpace supports individuals or entities in the creation, publication, and administration of educational courses.", creatorImageAlt: "Creator managing courses on a tablet" },
+  creatorCta: { title: "Unlock Your Potential as a Creator with ByteSpace", description: "Experience the collaboration of numerous creators and an expanding selection of courses. Register now and become a part of a community comprising over 10,000 local and international creators. Utilize our Course Editor, and showcase your expertise by publishing your finest course on the ByteSpace Course Library.", button: "Join as Creator" },
+  testimonials: { title: "Discover What Our Community Is Saying", description: "At ByteSpace, our vibrant community of learners and creators is at the heart of what we do. Hear directly from those who have experienced the transformative journey of learning and creating on our platform." },
+  footer: { newsletter: "Stay up to date with our latest features and releases by joining our newsletter.", disclaimer: "By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.", copyright: "© 2023 ByteSpace. All rights reserved.", privacy: "Privacy Policy", terms: "Terms of Service", cookies: "Cookie Settings" },
+  partners: { ariaLabel: "Trusted by teams" },
+};
+
 export const courseCategories = [
   "Featured",
   "Music",
