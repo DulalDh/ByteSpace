@@ -27,8 +27,8 @@ export function CourseCard({ course, students }: CourseCardProps) {
         <div className="mt-2 flex items-center gap-2">
           <span className="rounded-full bg-slate-100 px-2 py-1 text-[9px] text-slate-600">♧ Beginner</span>
           <div className="flex -space-x-1.5">
-            {students.map((student) => (
-              <RemoteImage key={student.name} imageId={student.avatar} alt="Course student" className="h-5 w-5 rounded-full border-2 border-white object-cover" />
+            {students.map((student, index) => (
+              <RemoteImage key={`${student.name}-${index}`} imageId={student.avatar} alt="Course student" className="h-5 w-5 rounded-full border-2 border-white object-cover" />
             ))}
           </div>
           <span className="text-[9px] text-slate-400">+{course.students}</span>

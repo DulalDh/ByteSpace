@@ -57,9 +57,9 @@ export function HeroSection({ query, onQueryChange }: HeroSectionProps) {
           </b>{" "}
           <span className="text-[#ceff00]">★</span>
           <div className="mt-2 flex -space-x-2">
-            {testimonials.map(({ name, avatar }) => (
+            {testimonials.map(({ name, avatar }, index) => (
               <img
-                key={name}
+                key={`${name}-${index}`}
                 src={`https://images.unsplash.com/${avatar}?auto=format&fit=crop&w=100&q=80`}
                 alt="ByteSpace student"
                 className="h-7 w-7 rounded-full border-2 border-white object-cover md:h-11 md:w-11"

@@ -10,8 +10,8 @@ export function TestimonialsSection() {
           <p className="max-w-xl text-[14.4px] leading-7 text-slate-600">At ByteSpace, our vibrant community of learners and creators is at the heart of what we do. Hear directly from those who have experienced the transformative journey of learning and creating on our platform.</p>
         </div>
         <div className="mt-9 grid gap-4 md:grid-cols-3">
-          {testimonials.map((item) => (
-            <article key={item.name} className="rounded-2xl bg-white p-6 shadow-sm">
+          {testimonials.map((item, index) => (
+            <article key={`${item.name}-${index}`} className="rounded-2xl bg-white p-6 shadow-sm">
               <RemoteImage imageId={item.avatar} alt={item.name} className="h-12 w-12 rounded-full object-cover" />
               <h3 className="mt-4 text-sm font-bold">{item.name}</h3>
               <p className="mt-1 text-xs font-semibold text-blue-600">{item.role}</p>
