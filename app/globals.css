@@ -1,10 +1,28 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-VariableItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 300 900;
+  font-display: swap;
+}
+@theme inline {
+  --font-sans: "Satoshi", Arial, Helvetica, sans-serif;
+}
+
 :root { --blue: #073fe5; --lime: #ceff00; --ink: #141a2b; }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; background: #fff; color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
-button, input { font: inherit; }
+html { scroll-behavior: smooth; font-family: "Satoshi", Arial, Helvetica, sans-serif; }
+body { margin: 0; background: #fff; color: var(--ink); font-family: inherit; }
+button, input, select, textarea { font: inherit; }
 .grid-bg { background-color: #073fe5; background-image: linear-gradient(#ffffff16 1px, transparent 1px), linear-gradient(90deg, #ffffff16 1px, transparent 1px); background-size: 112px 112px; }
 /* Keep the grid visible over the lime hero disc, as it is in the reference. */
 .hero-glow { background-color: #073fe5; background-image: radial-gradient(ellipse at 50% 112%, #ceff00 0 39%, transparent 39.2%), linear-gradient(#ffffff16 1px, transparent 1px), linear-gradient(90deg, #ffffff16 1px, transparent 1px); background-size: auto, 162px 162px, 162px 162px; }
