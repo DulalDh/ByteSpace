@@ -1,7 +1,7 @@
 import { CourseSearch } from "@/components/molecules/CourseSearch";
 import { SiteHeader } from "@/components/molecules/SiteHeader";
-import { testimonials } from "@/data/home-data.js";
 import { LearningProgressCard } from "@/components/molecules/LearningProgressCard";
+import { HappyStudentsCard } from "@/components/molecules/HappyStudentsCard";
 
 interface HeroSectionProps {
   query: string;
@@ -45,26 +45,7 @@ export function HeroSection({ query, onQueryChange }: HeroSectionProps) {
           </span>
         </div>
         <LearningProgressCard className="absolute right-[1%] top-[34%] z-10 md:right-[26%] md:top-[58%]" />
-        <div className="absolute bottom-[5%] left-[1%] z-12 rounded-2xl bg-white px-4 py-3 text-left text-slate-900 shadow-lg md:bottom-[8%] md:left-[26%] md:px-5 md:py-4">
-          <span className="block text-sm md:text-[16px]">Happy Students</span>
-          <b className="text-xs font-normal text-slate-500 md:text-base">
-            4.5 (240)
-          </b>{" "}
-          <span className="text-[#ceff00]">★</span>
-          <div className="mt-2 flex -space-x-2">
-            {testimonials.map(({ name, avatar }, index) => (
-              <img
-                key={`${name}-${index}`}
-                src={`https://images.unsplash.com/${avatar}?auto=format&fit=crop&w=100&q=80`}
-                alt="ByteSpace student"
-                className="h-7 w-7 rounded-full border-2 border-white object-cover md:h-11 md:w-11"
-              />
-            ))}
-            <span className="flex h-7 w-7 items-center justify-center rounded-full border-2 border-white bg-[#ceff00] text-[9px] font-bold md:h-11 md:w-11 md:text-sm">
-              2K+
-            </span>
-          </div>
-        </div>
+        <HappyStudentsCard className="absolute bottom-[5%] left-[1%] z-20 md:bottom-[8%] md:left-[26%]" />
 
         <div className="absolute left-[-8%] top-[14%] z-10 h-16 w-52 rotate-[18deg] rounded-full bg-[#ceff00] shadow-[0_45px_0_0_#ceff00,0_90px_0_0_#ceff00] md:left-[-10%]" />
         <div className="absolute right-[-10%] top-[14%] z-10 h-64 w-40 rotate-[-27deg] rounded-[45%] bg-[#ceff00] md:right-[-7%] md:h-72 md:w-48" />

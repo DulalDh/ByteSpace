@@ -13,7 +13,7 @@ export function SiteFooter() {
           <div className="[&_a]:text-[21px] [&_svg]:h-7 [&_svg]:w-7">
             <Brand />
           </div>
-          <p className="mt-6 max-w-[760px] text-sm leading-5 text-[#555] md:mt-[22px] md:text-[14px] md:leading-[22px]">
+          <p className="mt-6 max-w-[760px] text-sm leading-5 text-[#555] md:mt-[22px] md:text-[14px] md:leading-[14px]">
             Stay up to date with our latest features and releases by joining our
             newsletter.
           </p>
@@ -34,7 +34,7 @@ export function SiteFooter() {
               Search
             </button>
           </form>
-          <p className="mt-6 max-w-[720px] text-[11px] leading-5 text-[#555] md:mt-[22px] md:text-[11px] md:leading-5">
+          <p className="mt-6 max-w-[720px] text-[11px] leading-5 text-[#555] md:mt-[22px] md:text-[12px] md:leading-5">
             By subscribing, you agree to our Privacy Policy and consent to
             receive updates from our company.
           </p>
@@ -60,7 +60,7 @@ export function SiteFooter() {
           ))}
         </div>
       </div>
-      <div className="mx-auto mt-24 flex w-full max-w-[1808px] flex-wrap justify-between gap-3 border-t border-[#d6d8dc] pt-6 text-[11px] text-[#555] md:mt-[133px] md:pt-[26px]">
+      <div className="mx-auto mt-24 flex w-full max-w-[1808px] flex-wrap justify-between gap-3 border-t border-[#d6d8dc] pt-6 text-[12px] text-[#555] md:mt-[133px] md:pt-[26px]">
         <span>© 2023 ByteSpace. All rights reserved.</span>
         <span className="flex gap-4 md:gap-6">
           <a href="#footer">Privacy Policy</a>

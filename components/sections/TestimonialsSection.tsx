@@ -13,20 +13,38 @@ export function TestimonialsSection() {
     >
       <div className="mx-auto max-w-[1840px]">
         <div className="grid gap-7 md:grid-cols-[0.92fr_1fr] md:items-start md:gap-12">
-          <h2 className="max-w-[620px] text-[27px] font-extrabold leading-[1.2] tracking-[-0.035em] text-[#111827] sm:text-[34px] lg:text-[42px]">
-            Discover What Our<br />Community Is Saying
+          <h2 className="max-w-[620px] text-[27px] font-extrabold leading-[1.2] tracking-[-0.035em] text-[#111827] sm:text-[34px] lg:text-[44px]">
+            Discover What Our
+            <br />
+            Community Is Saying
           </h2>
-          <p className="max-w-[850px] pt-1 text-[14px] leading-[1.8] text-[#4b5c75] sm:text-[15px] lg:text-[17px]">
-            At ByteSpace, our vibrant community of learners and creators is at the heart of what we do. Hear directly from those who have experienced the transformative journey of learning and creating on our platform.
+          <p className="max-w-[850px] pt-1 text-[14px] leading-[1.8] text-[#4b5c75] sm:text-[15px] lg:text-[18px]">
+            At ByteSpace, our vibrant community of learners and creators is at
+            the heart of what we do. Hear directly from those who have
+            experienced the transformative journey of learning and creating on
+            our platform.
           </p>
         </div>
         <div className="mt-10 grid gap-5 md:mt-12 md:grid-cols-3">
           {testimonials.map((item, index) => (
-            <article key={`${item.name}-${index}`} className="min-h-[350px] rounded-[24px] border border-slate-200/50 bg-white p-7 shadow-[0_2px_4px_rgba(15,23,42,0.12)] sm:p-8 lg:min-h-[445px] lg:p-[35px]">
-              <RemoteImage imageId={item.avatar} alt={item.name} className="h-[60px] w-[60px] rounded-full object-cover lg:h-[70px] lg:w-[70px]" />
-              <h3 className="mt-5 text-[15px] font-bold leading-tight text-[#172033] lg:text-[16px]">{item.name}</h3>
-              <p className="mt-2 text-[13px] font-semibold leading-tight text-[#2864f0] lg:text-[14px]">{item.role}</p>
-              <p className="mt-7 text-[14px] leading-[1.9] text-[#53647d] lg:mt-8 lg:text-[16px] lg:leading-[1.9]">“{item.quote}”</p>
+            <article
+              key={`${item.name}-${index}`}
+              className="min-h-[350px] rounded-[24px] border border-slate-200/50 bg-white p-7 shadow-[0_2px_4px_rgba(15,23,42,0.12)] sm:p-8 lg:min-h-[445px] lg:p-[35px]"
+            >
+              <RemoteImage
+                imageId={item.avatar}
+                alt={item.name}
+                className="h-[60px] w-[60px] rounded-full object-cover lg:h-[70px] lg:w-[70px]"
+              />
+              <h3 className="mt-5 text-[15px] font-bold leading-tight text-[#172033] lg:text-[20px]">
+                {item.name}
+              </h3>
+              <p className="mt-2 text-[13px] font-semibold leading-tight text-[#2864f0] lg:text-[18px]">
+                {item.role}
+              </p>
+              <p className="mt-7 text-[14px] leading-[1.9] text-[#53647d] lg:mt-8 lg:text-[18px] lg:leading-[1.9]">
+                “{item.quote}”
+              </p>
             </article>
           ))}
         </div>

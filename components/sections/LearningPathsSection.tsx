@@ -50,7 +50,7 @@ export function LearningPathsSection() {
   return (
     <section className="mx-auto max-w-7xl px-5 pb-16 md:px-10 md:pb-20">
       <div className="mx-auto max-w-5xl text-center">
-        <h2 className="text-2xl font-extrabold tracking-tight md:text-[36px]">
+        <h2 className="text-2xl font-extrabold tracking-tight md:text-[44px]">
           Explore Diverse Learning Paths at ByteSpace
         </h2>
         <p className="mt-3 text-[18px] leading-6 text-slate-400">

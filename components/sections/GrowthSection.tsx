@@ -4,9 +4,9 @@ import {
   growthStats,
   testimonials,
 } from "@/data/home-data.js";
-import { RemoteImage } from "@/components/atoms/RemoteImage";
 import { CourseCard } from "@/components/molecules/CourseCard";
 import { LearningProgressCard } from "@/components/molecules/LearningProgressCard";
+import { HappyStudentsCard } from "@/components/molecules/HappyStudentsCard";
 
 export function GrowthSection() {
   return (
@@ -69,34 +69,66 @@ export function GrowthSection() {
         </div>
       </div>
       {/* Manage Courses Start */}
-      <div className="mx-auto grid max-w-7xl items-center gap-8 px-5 pb-16 md:grid-cols-2 md:px-10 md:pb-24 mt-20">
-        <div className="relative mx-auto w-full max-w-lg">
-          <div className="absolute inset-8 rounded-full bg-blue-100 blur-3xl" />
-          <RemoteImage
-            imageId="photo-1551836022-d5d88e9218df"
-            alt="Creator planning an online course"
-            className="relative h-72 w-full rounded-3xl object-cover shadow-xl md:h-96"
-          />
-          <div className="absolute bottom-4 left-4 rounded-xl bg-white p-3 shadow-lg">
-            <span className="text-[10px]">Total Revenue</span>
-            <b className="block text-lg text-blue-700">$1,200.38</b>
-            <span className="text-[9px] text-slate-400">This month</span>
+      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-20 pt-12 md:grid-cols-2 md:px-10 md:pb-28 md:pt-20 lg:gap-20">
+        <div className="relative mx-auto h-[390px] w-full max-w-[560px] sm:h-[490px] md:h-[570px]">
+          <div className="absolute inset-0 rounded-full bg-blue-100/70 blur-3xl" />
+          <div className="absolute left-10 top-[2%] z-10 w-[40%] rounded-[18px] bg-blue-700 px-4 py-4 text-white shadow-lg sm:px-6 sm:py-5">
+            <span className="block text-sm sm:text-lg text-[16px]">
+              Total Revenue
+            </span>
+            <span className="block text-xs text-white/70 text-[10px]">
+              July 1-28
+            </span>
+            <b className="mt-2 block text-xl sm:text-[24px]">$120.29</b>
+            <div className="mt-3 h-2.5 overflow-hidden rounded-full bg-white">
+              <div className="h-full w-[68%] rounded-full bg-[#ceff00]" />
+            </div>
           </div>
+          <div className="absolute left-10 top-[32%] z-10 w-[25%] rounded-[18px] bg-blue-700 px-4 py-4 text-white shadow-lg sm:px-6 sm:py-5">
+            <span className="block text-[16px]">Year to Date</span>
+            <span className="block text-xs text-white/70 text-[10px]">
+              2023
+            </span>
+            <b className="mt-2 block text-[24px]">$1,200.38</b>
+            <span className="mt-3 inline-block rounded-full bg-[#ceff00] px-3 py-1 text-xs font-semibold text-slate-900">
+              +12$
+            </span>
+          </div>
+          <img
+            src="/manage-courses.png"
+            alt="Creator managing courses on a tablet"
+            className="absolute bottom-[-15%] left-[13%] z-[11] h-100%] w-[100%] object-contain object-bottom drop-shadow-[0_24px_24px_rgba(15,23,42,0.24)]"
+          />
+          <HappyStudentsCard className="absolute bottom-[30%] right-0 z-20" />
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 120 160"
+            className="absolute left-[63%] top-[13%] z-[12] h-36 w-28 rotate-6 sm:right-[-2%] sm:h-44 sm:w-36"
+          >
+            <path
+              d="M60 12c68 0-16 25 31 38 42 12-37 21 3 36 43 16-39 19 4 43"
+              fill="none"
+              stroke="#ceff00"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="24"
+            />
+          </svg>
         </div>
-        <div>
-          <h2 className="text-3xl font-extrabold leading-tight tracking-tight md:text-[44px]">
+        <div className="relative z-10">
+          <h2 className="max-w-xl text-3xl font-extrabold leading-tight tracking-tight md:text-[44px]">
             Create &amp; Manage
             <br />
             Courses Easily.
           </h2>
-          <p className="mt-4 max-w-md text-[18px] leading-7 text-slate-600">
+          <p className="mt-6 max-w-xl text-base leading-7 text-slate-600 md:mt-8 md:text-[18px] md:leading-8">
             ByteSpace supports individuals or entities in the creation,
             publication, and administration of educational courses.
           </p>
-          <ul className="mt-5 space-y-3 text-xs">
+          <ul className="mt-7 space-y-4 text-base md:mt-9 md:text-[18px]">
             {creatorBenefits.map((benefit) => (
               <li key={benefit} className="flex items-center gap-2">
-                <span className="flex h-4 w-4 items-center justify-center rounded-full bg-blue-600 text-[9px] text-white">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm text-white">
                   ✓
                 </span>
                 {benefit}
