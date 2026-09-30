@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { copy } from "@/data/home-data.js";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ByteSpace — Learn. Create. Grow.",
-  description: "Discover practical courses and grow your skills with ByteSpace.",
+  title: copy.metadata.title,
+  description: copy.metadata.description,
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
