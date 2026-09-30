@@ -12,7 +12,7 @@ export function HeroSection({ query, onQueryChange }: HeroSectionProps) {
     <section className="grid-bg relative min-h-[760px] overflow-hidden text-white md:min-h-[1320px] xl:min-h-[1200px]">
       <SiteHeader />
       <div className="relative z-20 mx-auto max-w-[1500px] px-5 pt-12 text-center md:pt-[20px]">
-        <h1 className="mx-auto max-w-[1200px] text-[42px] font-extrabold leading-[1.08] tracking-tight sm:text-6xl md:text-[clamp(76px,5vw,100px)]">
+        <h1 className="mx-auto max-w-[1200px] text-[40px] font-extrabold leading-[1.08] tracking-tight sm:text-6xl md:text-[clamp(76px,5vw,100px)]">
           Get Access to Hundreds
           <br />
           Courses Available

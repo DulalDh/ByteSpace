@@ -7,7 +7,7 @@ export function SiteHeader() {
         <Brand light />
         <nav
           aria-label="Main navigation"
-          className="flex items-center gap-4 text-[10px] text-white/85 sm:gap-7 sm:text-xs md:gap-8 md:text-[20px]"
+          className="flex items-center gap-4 text-[10px] text-white/85 sm:gap-7 sm:text-xs md:gap-8 md:text-[18px]"
         >
           <a href="#home" className="text-white">
             Home
@@ -15,7 +15,7 @@ export function SiteHeader() {
           <a href="#courses">Courses</a>
           <a href="#creators">Creators</a>
         </nav>
-        <div className="flex items-center gap-3 text-[10px] sm:gap-4 sm:text-[11px] md:gap-7 md:text-[20px]">
+        <div className="flex items-center gap-3 text-[10px] sm:gap-4 sm:text-[11px] md:gap-7 md:text-[18px]">
           <a href="#footer">Sign In</a>
           <a
             className="rounded-full border border-white/40 px-3 py-1.5 md:px-4 md:py-2"
