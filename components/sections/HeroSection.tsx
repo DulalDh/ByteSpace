@@ -1,6 +1,7 @@
 import { CourseSearch } from "@/components/molecules/CourseSearch";
 import { SiteHeader } from "@/components/molecules/SiteHeader";
 import { testimonials } from "@/data/home-data.js";
+import { LearningProgressCard } from "@/components/molecules/LearningProgressCard";
 
 interface HeroSectionProps {
   query: string;
@@ -43,13 +44,7 @@ export function HeroSection({ query, onQueryChange }: HeroSectionProps) {
             200 Courses　•　1000+ Students
           </span>
         </div>
-        <div className="absolute right-[1%] top-[34%] z-10 rounded-2xl bg-white px-5 py-4 text-left text-slate-900 shadow-lg md:right-[26%] md:top-[58%] md:px-6 md:py-5">
-          <span className="text-sm md:text-[14px]">Learning Progress</span>
-          <b className="block text-5xl leading-[1.1] md:text-[48px]">55%</b>
-          <span className="mt-2 block h-2 w-44 rounded-full bg-slate-100 md:w-[210px]">
-            <i className="block h-full w-[55%] rounded-full bg-[#ceff00]" />
-          </span>
-        </div>
+        <LearningProgressCard className="absolute right-[1%] top-[34%] z-10 md:right-[26%] md:top-[58%]" />
         <div className="absolute bottom-[5%] left-[1%] z-12 rounded-2xl bg-white px-4 py-3 text-left text-slate-900 shadow-lg md:bottom-[8%] md:left-[26%] md:px-5 md:py-4">
           <span className="block text-sm md:text-[16px]">Happy Students</span>
           <b className="text-xs font-normal text-slate-500 md:text-base">
