@@ -1,4 +1,4 @@
-import { footerLinkGroups } from "@/data/home-data.js";
+import { copy, footerLinkGroups } from "@/data/home-data.js";
 import { SearchInput } from "@/components/atoms/SearchInput";
 import { Brand } from "@/components/molecules/Brand";
 
@@ -14,8 +14,7 @@ export function SiteFooter() {
             <Brand />
           </div>
           <p className="mt-6 max-w-[760px] text-sm leading-5 text-[#555] md:mt-[22px] md:text-[14px] md:leading-[14px]">
-            Stay up to date with our latest features and releases by joining our
-            newsletter.
+            {copy.footer.newsletter}
           </p>
           <form
             className="mt-11 flex h-11 w-full max-w-[760px] items-center gap-6 md:mt-[45px] md:h-[45px] md:gap-6"
@@ -23,20 +22,19 @@ export function SiteFooter() {
           >
             <div className="flex h-full min-w-0 flex-1 items-center rounded-full border border-[#d6d8dc] px-5">
               <SearchInput
-                label="Your email"
+                label={copy.search.emailLabel}
                 type="email"
                 name="email"
-                placeholder="Enter your email"
+                placeholder={copy.search.emailPlaceholder}
                 autoComplete="email"
               />
             </div>
             <button className="h-full shrink-0 rounded-full bg-[#ceff00] px-6 text-[14px] font-medium">
-              Search
+              {copy.search.button}
             </button>
           </form>
           <p className="mt-6 max-w-[720px] text-[11px] leading-5 text-[#555] md:mt-[22px] md:text-[12px] md:leading-5">
-            By subscribing, you agree to our Privacy Policy and consent to
-            receive updates from our company.
+            {copy.footer.disclaimer}
           </p>
         </div>
         <div className="grid grid-cols-2 gap-x-6 gap-y-6 pt-7 text-[13px] text-[#555] sm:grid-cols-3 md:pt-14 md:text-[14px]">
@@ -61,11 +59,11 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="mx-auto mt-24 flex w-full max-w-[1808px] flex-wrap justify-between gap-3 border-t border-[#d6d8dc] pt-6 text-[12px] text-[#555] md:mt-[133px] md:pt-[26px]">
-        <span>© 2023 ByteSpace. All rights reserved.</span>
+        <span>{copy.footer.copyright}</span>
         <span className="flex gap-4 md:gap-6">
-          <a href="#footer">Privacy Policy</a>
-          <a href="#footer">Terms of Service</a>
-          <a href="#footer">Cookie Settings</a>
+          <a href="#footer">{copy.footer.privacy}</a>
+          <a href="#footer">{copy.footer.terms}</a>
+          <a href="#footer">{copy.footer.cookies}</a>
         </span>
       </div>
     </footer>

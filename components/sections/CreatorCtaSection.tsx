@@ -1,25 +1,20 @@
+import { copy } from "@/data/home-data.js";
+
 export function CreatorCtaSection() {
   return (
     <section className="relative isolate flex min-h-[400px] items-center overflow-hidden bg-[#073fe5] bg-[linear-gradient(#ffffff18_1px,transparent_1px),linear-gradient(90deg,#ffffff18_1px,transparent_1px)] bg-[size:136px_136px] px-5 py-12 text-center text-white md:min-h-[496px]">
       <div className="relative z-10 mx-auto -mt-1 max-w-6xl">
         <h2 className="mx-auto max-w-4xl text-[24px] font-extrabold leading-[1.2] tracking-[-0.035em] sm:text-[30px] md:text-[44px]">
-          Unlock Your Potential as a
-          <br className="hidden sm:block" /> Creator with ByteSpace
+          {copy.creatorCta.title}
         </h2>
         <p className="mx-auto mt-6 max-w-[1120px] text-[12px] leading-[1.65] text-white/90 sm:text-[14px] md:text-[18px]">
-          Experience the collaboration of numerous creators and an expanding
-          selection of courses. Register now and become a
-          <br className="hidden xl:block" /> part of a community comprising over
-          10,000 local and international creators. Utilize our Course Editor,
-          and showcase your
-          <br className="hidden xl:block" /> expertise by publishing your finest
-          course on the ByteSpace Course Library.
+          {copy.creatorCta.description}
         </p>
         <a
           href="#footer"
           className="mt-8 inline-flex min-h-[46px] items-center justify-center rounded-full bg-[#ceff00] px-[26px] text-[16px] font-medium text-slate-900 transition-colors hover:bg-[#dcff45] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
         >
-          Join as Creator
+          {copy.creatorCta.button}
         </a>
       </div>
 

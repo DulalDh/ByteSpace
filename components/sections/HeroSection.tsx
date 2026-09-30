@@ -2,6 +2,7 @@ import { CourseSearch } from "@/components/molecules/CourseSearch";
 import { SiteHeader } from "@/components/molecules/SiteHeader";
 import { LearningProgressCard } from "@/components/molecules/LearningProgressCard";
 import { HappyStudentsCard } from "@/components/molecules/HappyStudentsCard";
+import { copy } from "@/data/home-data.js";
 
 interface HeroSectionProps {
   query: string;
@@ -14,13 +15,10 @@ export function HeroSection({ query, onQueryChange }: HeroSectionProps) {
       <SiteHeader />
       <div className="relative z-20 mx-auto max-w-[1500px] px-5 pt-12 mt-8 text-center md:pt-[20px]">
         <h1 className="mx-auto max-w-[1200px] text-[40px] font-extrabold leading-[1.08] tracking-tight sm:text-6xl md:text-[clamp(72px,5vw,100px)]">
-          Get Access to Hundreds
-          <br />
-          Courses Available
+          {copy.hero.title}
         </h1>
         <p className="mx-auto mt-8 max-w-5xl text-sm leading-6 text-white/75 md:mt-12 md:text-[18px]">
-          Unlock your creativity, gain valuable knowledge, and grow your
-          business with our wide range of courses.
+          {copy.hero.description}
         </p>
         <CourseSearch query={query} onQueryChange={onQueryChange} />
       </div>
@@ -32,16 +30,16 @@ export function HeroSection({ query, onQueryChange }: HeroSectionProps) {
         />
         <img
           src="/hero-learner.png"
-          alt="Smiling learner studying on a laptop"
+          alt={copy.hero.learnerAlt}
           className="absolute bottom-0 left-1/2 z-[1] w-[min(75vw,520px)] max-w-none -translate-x-1/2 md:w-[min(50vw,760px)]"
         />
 
         <div className="absolute left-[4%] top-[28%] z-10 rounded-2xl bg-white px-5 py-4 text-left text-slate-900 shadow-lg md:left-[22%] md:top-[56%] md:px-6 md:py-5">
           <b className="block text-base font-medium md:text-[16px]">
-            UI/UX Design
+            {copy.hero.category}
           </b>
           <span className="text-sm text-slate-400 md:text-[12px]">
-            200 Courses　•　1000+ Students
+            {copy.hero.categoryStats}
           </span>
         </div>
         <LearningProgressCard className="absolute right-[1%] top-[34%] z-10 md:right-[26%] md:top-[58%]" />

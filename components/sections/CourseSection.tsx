@@ -1,5 +1,5 @@
 import type { Course, Testimonial } from "@/types/home";
-import { courseCategories } from "@/data/home-data.js";
+import { copy, courseCategories } from "@/data/home-data.js";
 import { CourseCard } from "@/components/molecules/CourseCard";
 
 interface CourseSectionProps {
@@ -22,14 +22,10 @@ export function CourseSection({
     >
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="text-4xl font-extrabold leading-tight tracking-tight md:text-[42px]">
-          Discover Your Passion,
-          <br />
-          Build Your Skills
+          {copy.courseSection.title}
         </h2>
         <p className="mx-auto mt-4 max-w-4xl text-[18px] text-[#82868E]">
-          At ByteSpace Courses, we bring you close to life-changing knowledge.
-          Explore a variety of courses across different fields, from technology
-          to the arts, and make a difference in your career and life.
+          {copy.courseSection.description}
         </p>
       </div>
       <div className="mx-auto mt-7 flex max-w-5xl flex-wrap justify-center gap-2">
@@ -57,7 +53,7 @@ export function CourseSection({
         </div>
       ) : (
         <div className="py-16 text-center text-sm text-slate-500">
-          No courses found. Try a different search or category.
+          {copy.courseSection.empty}
         </div>
       )}
     </section>

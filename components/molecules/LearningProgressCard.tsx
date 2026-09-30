@@ -1,3 +1,5 @@
+import { copy } from "@/data/home-data.js";
+
 interface LearningProgressCardProps {
   className?: string;
   size?: "compact" | "large";
@@ -26,8 +28,8 @@ export function LearningProgressCard({
 
   return (
     <div className={`bg-white text-left text-slate-900 ${styles.card} ${className}`}>
-      <span className={styles.label}>Learning Progress</span>
-      <b className={`block ${styles.percentage}`}>55%</b>
+      <span className={styles.label}>{copy.progress.label}</span>
+      <b className={`block ${styles.percentage}`}>{copy.progress.percentage}</b>
       <span className={`block rounded-full bg-slate-100 ${styles.progress}`}>
         <i className="block h-full w-[55%] rounded-full bg-[#ceff00]" />
       </span>
