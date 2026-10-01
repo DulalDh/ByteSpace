@@ -1,5 +1,7 @@
+"use client";
+
 import { copy, footerLinkGroups } from "@/data/home-data.js";
-import { SearchInput } from "@/components/atoms/SearchInput";
+import { EmailInput } from "@/components/atoms/EmailInput";
 import { Brand } from "@/components/molecules/Brand";
 
 export function SiteFooter() {
@@ -17,16 +19,21 @@ export function SiteFooter() {
             {copy.footer.newsletter}
           </p>
           <form
-            className="mt-11 flex h-11 w-full max-w-[760px] items-center gap-6 md:mt-[45px] md:h-[45px] md:gap-6"
+            className="relative mt-11 flex h-11 w-full max-w-[760px] items-center gap-6 md:mt-[45px] md:h-[45px] md:gap-6"
             onSubmit={(event) => event.preventDefault()}
           >
             <div className="flex h-full min-w-0 flex-1 items-center rounded-full border border-[#d6d8dc] px-5">
-              <SearchInput
+              <EmailInput
+                id="footer-email"
                 label={copy.search.emailLabel}
-                type="email"
                 name="email"
                 placeholder={copy.search.emailPlaceholder}
                 autoComplete="email"
+                className="h-full min-w-0 flex-1"
+                fieldClassName="flex h-full items-center"
+                errorClassName="text-xs"
+                labelClassName="sr-only"
+                inputClassName="h-[43px] min-w-0 w-full self-center bg-transparent py-0 text-base leading-[43px] text-slate-700 outline-none placeholder:text-slate-400 md:text-[24px]"
               />
             </div>
             <button className="h-full shrink-0 rounded-full bg-[#ceff00] px-6 text-[14px] font-medium">

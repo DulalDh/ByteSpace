@@ -1,8 +1,12 @@
+"use client";
+
 import { LabeledInput } from "@/components/atoms/LabeledInput";
+import { EmailInput } from "@/components/atoms/EmailInput";
 import { Brand } from "@/components/molecules/Brand";
 import { CourseCard } from "@/components/molecules/CourseCard";
 import { HappyStudentsCard } from "@/components/molecules/HappyStudentsCard";
 import { courses, testimonials } from "@/data/home-data.js";
+import Link from "next/link";
 
 function SocialIcon({ kind }: { kind: "facebook" | "google" }) {
   return kind === "facebook" ? (
@@ -134,6 +138,13 @@ export function LoginPage() {
           aria-labelledby="welcome-heading"
         >
           <div className="relative h-full w-[min(614px,calc(100%_-_112px))] pt-[67px] max-[1100px]:w-[min(614px,calc(100%_-_80px))] max-[1100px]:pt-[50px] max-[600px]:h-auto max-[600px]:w-[calc(100%_-_48px)] max-[600px]:py-6">
+            <Link
+              href="/"
+              className="absolute top-5 left-0 inline-flex items-center gap-2 text-[15px] text-[#164bff] no-underline hover:underline focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#164bff]"
+            >
+              <span aria-hidden="true">←</span>
+              Back to home
+            </Link>
             <p className="m-0 text-[24px] leading-[1.3] text-[#164bff] max-[600px]:text-[18px]">
               Sign In
             </p>
@@ -143,27 +154,33 @@ export function LoginPage() {
             >
               Welcome Back
             </h1>
-            <form className="flex flex-col">
-              <LabeledInput
+            <form
+              className="flex flex-col"
+              onSubmit={(event) => event.preventDefault()}
+            >
+              <EmailInput
                 id="email"
                 label="Email"
-                type="email"
+                required
                 placeholder="designer@example.com"
                 autoComplete="email"
                 className="flex flex-col"
-                labelClassName="mb-2 text-[18px] leading-[1.35] max-[600px]:text-[15px]"
-                inputClassName="mb-[22px] h-[48px] w-full rounded-[17px] border-[1.5px] border-[#e3e4e7] px-[26px] text-[22px] text-[#222] shadow-[0_0_0_1px_#00000003] outline-none placeholder:text-[#999ca5] focus:border-[#164bff] max-[1100px]:mb-4 max-[600px]:mb-4 max-[600px]:h-[39px] max-[600px]:rounded-[13px] max-[600px]:px-4 max-[600px]:text-[17px]"
+                labelClassName="text-[18px] leading-[1.35] max-[600px]:text-[15px]"
+                inputClassName="mt-[10px] h-[48px] w-full rounded-[17px] border-[1.5px] border-[#e3e4e7] px-[26px] text-[22px] text-[#222] shadow-[0_0_0_1px_#00000003] outline-none placeholder:text-[#999ca5] focus:border-[#164bff] max-[1100px]:mb-4 max-[600px]:mb-4 max-[600px]:h-[39px] max-[600px]:rounded-[13px] max-[600px]:px-4 max-[600px]:text-[17px]"
               />
-              <LabeledInput
-                id="password"
-                label="Password"
-                type="password"
-                placeholder="********"
-                autoComplete="current-password"
-                className="flex flex-col"
-                labelClassName="mb-2 text-[18px] leading-[1.35] max-[600px]:text-[15px]"
-                inputClassName="mb-[22px] h-[48px] w-full rounded-[17px] border-[1.5px] border-[#e3e4e7] px-[26px] text-[22px] text-[#222] shadow-[0_0_0_1px_#00000003] outline-none placeholder:text-[#999ca5] focus:border-[#164bff] max-[1100px]:mb-4 max-[600px]:mb-4 max-[600px]:h-[39px] max-[600px]:rounded-[13px] max-[600px]:px-4 max-[600px]:text-[17px]"
-              />
+              <div className="relative mt-[22px]">
+                <LabeledInput
+                  id="password"
+                  label="Password"
+                  type="password"
+                  placeholder="********"
+                  autoComplete="current-password"
+                  passwordToggle
+                  className="flex flex-col"
+                  labelClassName="mb-2 text-[18px] leading-[1.35] max-[600px]:text-[15px]"
+                  inputClassName="mb-[22px] h-[48px] w-full rounded-[17px] border-[1.5px] border-[#e3e4e7] py-0 pr-14 pl-[26px] text-[22px] text-[#222] shadow-[0_0_0_1px_#00000003] outline-none placeholder:text-[#999ca5] focus:border-[#164bff] max-[1100px]:mb-4 max-[600px]:mb-4 max-[600px]:h-[39px] max-[600px]:rounded-[13px] max-[600px]:pl-4 max-[600px]:text-[17px]"
+                />
+              </div>
               <button
                 type="submit"
                 className="mt-0 h-[43px] min-w-[99px] self-end cursor-pointer rounded-[40px] border-0 bg-[#ceff00] text-[23px] text-[#111] max-[600px]:h-[36px] max-[600px]:min-w-[84px] max-[600px]:text-[18px]"
