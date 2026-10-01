@@ -2,13 +2,14 @@ import { copy } from "@/data/home-data.js";
 
 interface BrandProps {
   light?: boolean;
+  className?: string;
 }
 
-export function Brand({ light = false }: BrandProps) {
+export function Brand({ light = false, className = "" }: BrandProps) {
   return (
     <a
       href="#home"
-      className={`flex items-center gap-2 text-base font-black tracking-tight sm:text-lg md:gap-2 md:text-[24px] ${light ? "text-white" : "text-slate-900"}`}
+      className={`flex items-center gap-2 text-base font-black tracking-tight sm:text-lg md:gap-2 md:text-[24px] ${light ? "text-white" : "text-slate-900"} ${className}`}
     >
       <svg
         aria-hidden="true"
