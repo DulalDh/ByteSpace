@@ -4,6 +4,7 @@ import { EmailInput } from "@/components/atoms/EmailInput";
 import { LabeledInput } from "@/components/atoms/LabeledInput";
 import { copy } from "@/data/home-data.js";
 import Link from "next/link";
+import { useState } from "react";
 
 function SocialIcon({ kind }: { kind: "facebook" | "google" }) {
   return kind === "facebook" ? (
@@ -53,6 +54,7 @@ const fieldClass =
 export function AuthFormPanel({ mode }: { mode: "login" | "signup" }) {
   const isSignup = mode === "signup";
   const text = copy.auth[mode];
+  const [fullNameError, setFullNameError] = useState("");
 
   return (
     <section
@@ -62,7 +64,7 @@ export function AuthFormPanel({ mode }: { mode: "login" | "signup" }) {
       <div className="relative h-full w-[min(614px,calc(100%_-_112px))] pt-[67px] max-[1100px]:w-[min(614px,calc(100%_-_80px))] max-[1100px]:pt-[50px] max-[600px]:h-auto max-[600px]:w-[calc(100%_-_48px)] max-[600px]:py-6">
         <Link
           href="/"
-          className="absolute top-5 left-0 inline-flex items-center gap-2 text-[15px] text-[#164bff] no-underline hover:underline focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#164bff]"
+          className="absolute top-5 left-0 inline-flex items-center gap-2 text-[15px] text-[#164bff] no-underline hover:underline focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#164bff] max-[1100px]:static max-[1100px]:mb-5"
         >
           <span aria-hidden="true">←</span>
           {copy.auth.backToHome}
@@ -86,21 +88,76 @@ export function AuthFormPanel({ mode }: { mode: "login" | "signup" }) {
         </h1>
         <form
           className="flex flex-col"
-          onSubmit={(event) => event.preventDefault()}
+          noValidate
+          onSubmit={(event) => {
+            event.preventDefault();
+
+            if (isSignup) {
+              const fullName = new FormData(event.currentTarget).get(
+                "full-name",
+              );
+              if (typeof fullName !== "string" || !fullName.trim()) {
+                setFullNameError("Please enter your full name.");
+                event.currentTarget.reportValidity();
+                return;
+              }
+              setFullNameError("");
+            }
+
+            event.currentTarget.reportValidity();
+          }}
         >
           {isSignup && (
             <div className="mb-[32px]">
               <LabeledInput
                 id="full-name"
-                label={copy.auth.signup.fullNameLabel}
+                name="full-name"
+                label={
+                  <>
+                    {copy.auth.signup.fullNameLabel}
+                    <span aria-hidden="true" className="ml-1 text-red-600">
+                      *
+                    </span>
+                  </>
+                }
                 type="text"
                 placeholder={copy.auth.signup.fullNamePlaceholder}
                 autoComplete="name"
                 required
+                aria-invalid={Boolean(fullNameError)}
+                aria-describedby={fullNameError ? "full-name-error" : undefined}
+                onFocus={(event) => {
+                  if (!event.currentTarget.value.trim()) {
+                    setFullNameError("Full name is required.");
+                  }
+                }}
+                onChange={(event) => {
+                  setFullNameError(
+                    event.currentTarget.value.trim()
+                      ? ""
+                      : "Full name is required.",
+                  );
+                }}
+                onBlur={(event) => {
+                  setFullNameError(
+                    event.currentTarget.value.trim()
+                      ? ""
+                      : "Full name is required.",
+                  );
+                }}
                 className="flex flex-col"
                 labelClassName="text-[18px] leading-[1.35] max-[600px]:text-[15px]"
                 inputClassName={fieldClass}
               />
+              {fullNameError && (
+                <p
+                  id="full-name-error"
+                  role="alert"
+                  className="absolute mt-1 text-sm text-red-600"
+                >
+                  {fullNameError}
+                </p>
+              )}
             </div>
           )}
           <EmailInput
@@ -160,7 +217,7 @@ export function AuthFormPanel({ mode }: { mode: "login" | "signup" }) {
             </div>
           </>
         )}
-        <p className="absolute right-0 bottom-[5.2%] left-0 m-0 text-center text-[20px] text-[#999] max-[600px]:static max-[600px]:mt-6 max-[600px]:text-[15px]">
+        <p className="absolute right-0 bottom-[5.2%] left-0 m-0 text-center text-[16px] text-[#999] max-[600px]:static max-[600px]:mt-6 max-[600px]:text-[16px]">
           {text.prompt}{" "}
           <Link
             href={isSignup ? "/login" : "/signup"}
