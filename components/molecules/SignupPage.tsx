@@ -1,10 +1,10 @@
 import { AuthFormPanel } from "@/components/molecules/auth/AuthFormPanel";
 import { AuthPageLayout } from "@/components/molecules/auth/AuthPageLayout";
 
-export function LoginPage() {
+export function SignupPage() {
   return (
-    <AuthPageLayout mode="login">
-      <AuthFormPanel mode="login" />
+    <AuthPageLayout mode="signup">
+      <AuthFormPanel mode="signup" />
     </AuthPageLayout>
   );
 }
