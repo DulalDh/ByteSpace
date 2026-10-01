@@ -1,6 +1,5 @@
 /** @typedef {import("../types/home").Course} Course */
 /** @typedef {import("../types/home").Testimonial} Testimonial */
-/** @typedef {import("../types/home").ExploreCategory} ExploreCategory */
 /** @typedef {import("../types/home").FooterLinkGroup} FooterLinkGroup */
 
 /** Shared interface copy used by every component. */
@@ -126,14 +125,14 @@ export const courses = [
   },
 ];
 
-/** @type {ExploreCategory[]} */
+/** @type {{ title: string }[]} */
 export const learningPaths = [
-  { icon: "✳", title: "Design" },
-  { icon: "♙", title: "Development" },
-  { icon: "▣", title: "IT & Software" },
-  { icon: "▦", title: "Business" },
-  { icon: "✣", title: "Marketing" },
-  { icon: "▧", title: "Photography" },
+  { title: "Design" },
+  { title: "Development" },
+  { title: "IT & Software" },
+  { title: "Business" },
+  { title: "Marketing" },
+  { title: "Photography" },
 ];
 
 /** @type {Testimonial[]} */
