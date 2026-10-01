@@ -21,21 +21,21 @@ export function CourseSection({
       className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20"
     >
       <div className="mx-auto max-w-4xl text-center">
-        <h2 className="text-4xl font-extrabold leading-tight tracking-tight md:text-[42px]">
+        <h2 className="text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl md:text-[42px]">
           {copy.courseSection.title}
         </h2>
-        <p className="mx-auto mt-4 max-w-4xl text-[18px] text-[#82868E]">
+        <p className="mx-auto mt-4 max-w-4xl text-base text-[#82868E] sm:text-[18px]">
           {copy.courseSection.description}
         </p>
       </div>
-      <div className="mx-auto mt-7 flex max-w-5xl flex-wrap justify-center gap-2">
+      <div className="mx-auto mt-7 flex max-w-5xl flex-nowrap justify-start gap-2 overflow-x-auto pb-2 sm:flex-wrap sm:justify-center sm:overflow-visible">
         {courseCategories.map((category) => (
           <button
             key={category}
             type="button"
             onClick={() => onCategoryChange(category)}
             aria-pressed={activeCategory === category}
-            className={`rounded-full px-4 py-2 text-[16px] mx-1 my-2 transition ${activeCategory === category ? "bg-[#ceff00] font-bold text-slate-900" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}`}
+            className={`mx-0 my-0 shrink-0 rounded-full px-4 py-2 text-sm transition sm:mx-1 sm:my-2 sm:text-base ${activeCategory === category ? "bg-[#ceff00] font-bold text-slate-900" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}`}
           >
             {category}
           </button>

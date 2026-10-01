@@ -35,11 +35,11 @@ export function TrustedPartnersSection() {
   return (
     <section
       aria-label={copy.partners.ariaLabel}
-      className="flex min-h-54 flex-wrap items-center justify-center gap-x-10 gap-y-4 bg-[#F5F5F6] px-5 py-6 text-[#82868E] sm:gap-x-14"
+      className="flex min-h-40 flex-wrap items-center justify-center gap-x-5 gap-y-3 bg-[#F5F5F6] px-4 py-6 text-[#82868E] sm:min-h-54 sm:gap-x-14"
     >
       {partnerNames.map((name, index) => (
-        <div key={index} className="flex items-center gap-3 text-[24px] font-bold tracking-tight">
-          <span className="h-10 w-10 shrink-0">{partnerMarks[index]}</span>
+        <div key={index} className="flex items-center gap-2 text-sm font-bold tracking-tight sm:gap-3 sm:text-[24px]">
+          <span className="h-7 w-7 shrink-0 sm:h-10 sm:w-10">{partnerMarks[index]}</span>
           <span>{name}</span>
         </div>
       ))}

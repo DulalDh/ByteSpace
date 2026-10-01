@@ -20,11 +20,13 @@ export function GrowthSection() {
           <p className="mt-5 max-w-lg leading-7 text-slate-600 font-medium md:text-[18px]">
             {copy.growth.description}
           </p>
-          <div className="mt-7 flex gap-8">
+          <div className="mt-7 flex flex-wrap gap-6 sm:gap-8">
             {growthStats.map(({ value, label }) => (
               <div key={label}>
-                <b className="text-[44px] font-bold text-blue-600">{value}</b>
-                <span className="text-[18px] mt-1 block text-slate-600 font-medium">
+                <b className="text-3xl font-bold text-blue-600 sm:text-[44px]">
+                  {value}
+                </b>
+                <span className="mt-1 block text-sm font-medium text-slate-600 sm:text-[18px]">
                   {label}
                 </span>
               </div>
@@ -43,7 +45,7 @@ export function GrowthSection() {
           <img
             src="/hero-learner.png"
             alt={copy.hero.learnerAlt}
-            className="absolute bottom-[-30%] left-[10%] z-10 w-[700px] max-w-none drop-shadow-[0_30px_28px_rgba(15,23,42,0.28)]"
+            className="absolute bottom-[-10%] left-1/2 z-10 w-[min(105vw,560px)] max-w-none -translate-x-1/2 drop-shadow-[0_30px_28px_rgba(15,23,42,0.28)] sm:bottom-[-30%] sm:left-[10%] sm:w-[700px] sm:translate-x-0"
           />
           <LearningProgressCard
             size="large"
@@ -69,32 +71,38 @@ export function GrowthSection() {
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-20 pt-12 md:grid-cols-2 md:px-10 md:pb-28 md:pt-20 lg:gap-20">
         <div className="relative mx-auto h-[390px] w-full max-w-[560px] sm:h-[490px] md:h-[570px]">
           <div className="absolute inset-0 rounded-full bg-blue-100/70 blur-3xl" />
-          <div className="absolute left-10 top-[2%] z-10 w-[40%] rounded-[18px] bg-blue-700 px-4 py-4 text-white shadow-lg sm:px-6 sm:py-5">
-            <span className="block text-sm sm:text-lg text-[16px]">
+          <div className="absolute left-0 top-[2%] z-[2] w-[48%] rounded-[18px] bg-blue-700 px-3 py-3 text-white shadow-lg sm:left-10 sm:w-[40%] sm:px-6 sm:py-5">
+            <span className="block text-sm sm:text-lg">
               {copy.growth.revenue}
             </span>
-            <span className="block text-xs text-white/70 text-[10px]">
+            <span className="block text-[10px] text-white/70 sm:text-xs">
               {copy.growth.revenuePeriod}
             </span>
-            <b className="mt-2 block text-xl sm:text-[24px]">{copy.growth.revenueAmount}</b>
+            <b className="mt-2 block text-base sm:text-[24px]">
+              {copy.growth.revenueAmount}
+            </b>
             <div className="mt-3 h-2.5 overflow-hidden rounded-full bg-white">
               <div className="h-full w-[68%] rounded-full bg-[#ceff00]" />
             </div>
           </div>
-          <div className="absolute left-10 top-[32%] z-10 w-[25%] rounded-[18px] bg-blue-700 px-4 py-4 text-white shadow-lg sm:px-6 sm:py-5">
-            <span className="block text-[16px]">{copy.growth.yearToDate}</span>
-            <span className="block text-xs text-white/70 text-[10px]">
+          <div className="absolute top-[38%] z-[2] w-[44%] rounded-[18px] bg-blue-700 px-3 py-3 text-white shadow-lg sm:left-10 sm:right-auto sm:top-[32%] sm:w-[27%] sm:px-6 sm:py-5">
+            <span className="block text-sm sm:text-[16px]">
+              {copy.growth.yearToDate}
+            </span>
+            <span className="block text-[10px] text-white/70 sm:text-xs">
               {copy.growth.year}
             </span>
-            <b className="mt-2 block text-[24px]">{copy.growth.annualRevenue}</b>
-            <span className="mt-3 inline-block rounded-full bg-[#ceff00] px-3 py-1 text-xs font-semibold text-slate-900">
+            <b className="mt-2 block text-lg sm:text-[24px]">
+              {copy.growth.annualRevenue}
+            </b>
+            <span className="mt-2 inline-block rounded-full bg-[#ceff00] px-2 py-1 text-[10px] font-semibold text-slate-900 sm:mt-3 sm:px-3 sm:text-xs">
               {copy.growth.increase}
             </span>
           </div>
           <img
             src="/manage-courses.png"
             alt={copy.growth.creatorImageAlt}
-            className="absolute bottom-[-15%] left-[13%] z-[11] h-100%] w-[100%] object-contain object-bottom drop-shadow-[0_24px_24px_rgba(15,23,42,0.24)]"
+            className="absolute bottom-[-5%] left-[8%] z-[11] h-full w-[92%] object-contain object-bottom drop-shadow-[0_24px_24px_rgba(15,23,42,0.24)] sm:bottom-[-15%] sm:left-[3%] sm:w-full sm:z-[11]"
           />
           <HappyStudentsCard className="absolute bottom-[30%] right-0 z-20" />
           <svg

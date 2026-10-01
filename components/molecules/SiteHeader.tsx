@@ -4,12 +4,12 @@ import Link from "next/link";
 
 export function SiteHeader() {
   return (
-    <header className="relative z-30  border-white/15 bg-[#063fe7]/30 mt-4">
-      <div className="mx-auto flex h-[76px] max-w-[1600px] items-center justify-between px-5 md:h-[80px] md:px-5">
+    <header className="relative z-30 mt-2 border-white/15 bg-[#063fe7]/30 sm:mt-4">
+      <div className="mx-auto flex min-h-[64px] max-w-[1600px] items-center justify-between gap-3 px-4 sm:h-[76px] sm:px-5 md:h-[80px]">
         <Brand light />
         <nav
           aria-label={copy.nav.label}
-          className="flex items-center gap-4 text-[10px] text-white/85 sm:gap-7 sm:text-xs md:gap-8 md:text-[16px]"
+          className="hidden items-center gap-4 text-[10px] text-white/85 sm:flex sm:gap-5 sm:text-xs md:gap-8 md:text-[16px]"
         >
           <a href="#home" className="text-white">
             {copy.nav.home}
@@ -17,10 +17,10 @@ export function SiteHeader() {
           <a href="#courses">{copy.nav.courses}</a>
           <a href="#creators">{copy.nav.creators}</a>
         </nav>
-        <div className="flex items-center gap-3 text-[10px] sm:gap-4 sm:text-[11px] md:gap-7 md:text-[16px]">
+        <div className="flex shrink-0 items-center gap-3 text-xs sm:gap-4 sm:text-[11px] md:gap-7 md:text-[16px]">
           <Link href="/login">{copy.nav.signIn}</Link>
           <a
-            className="rounded-full px-3 py-1.5 md:px-4 md:py-2"
+            className="rounded-full bg-white/10 px-3 py-2 sm:bg-transparent md:px-4"
             href="#footer"
           >
             {copy.nav.join}
@@ -28,7 +28,7 @@ export function SiteHeader() {
           <a
             aria-label={copy.nav.shoppingBag}
             href="#courses"
-            className="hidden items-center sm:flex"
+            className="hidden items-center md:flex"
           >
             <svg
               aria-hidden="true"
