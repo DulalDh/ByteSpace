@@ -14,11 +14,6 @@ export interface Testimonial {
   quote: string;
 }
 
-export interface ExploreCategory {
-  icon: string;
-  title: string;
-}
-
 export interface FooterLinkGroup {
   links: string[];
 }
