@@ -8,6 +8,9 @@ type SearchInputProps = Pick<
   showSearchIcon?: boolean;
   compact?: boolean;
   onChange?: ChangeEventHandler<HTMLInputElement>;
+  inputMode?: InputHTMLAttributes<HTMLInputElement>["inputMode"];
+  "aria-invalid"?: InputHTMLAttributes<HTMLInputElement>["aria-invalid"];
+  "aria-describedby"?: InputHTMLAttributes<HTMLInputElement>["aria-describedby"];
 };
 
 export function SearchInput({
