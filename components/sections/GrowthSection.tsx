@@ -12,28 +12,30 @@ import { copy } from "@/data/home-data.js";
 export function GrowthSection() {
   return (
     <section className="soft-glow">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-11 md:grid-cols-2 md:px-10 md:py-[4.75rem] lg:gap-16 lg:py-[5rem]">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-11 xl:grid-cols-2 xl:gap-16 xl:px-10 xl:py-[5rem]">
         <div>
-          <h2 className="max-w-lg text-3xl font-extrabold leading-tight tracking-tight md:text-[44px]">
+          <h2 className="max-w-lg text-3xl font-extrabold leading-tight tracking-tight xl:text-[44px]">
             {copy.growth.title}
           </h2>
-          <p className="mt-5 max-w-lg leading-7 text-slate-600 font-medium md:text-[18px]">
+          <p className="mt-5 max-w-lg leading-7 text-slate-600 font-medium xl:text-[18px]">
             {copy.growth.description}
           </p>
-          <div className="mt-7 flex gap-8">
+          <div className="mt-7 flex flex-wrap gap-6 xl:gap-8">
             {growthStats.map(({ value, label }) => (
               <div key={label}>
-                <b className="text-[44px] font-bold text-blue-600">{value}</b>
-                <span className="text-[18px] mt-1 block text-slate-600 font-medium">
+                <b className="text-3xl font-bold text-blue-600 xl:text-[44px]">
+                  {value}
+                </b>
+                <span className="mt-1 block text-sm font-medium text-slate-600 xl:text-[18px]">
                   {label}
                 </span>
               </div>
             ))}
           </div>
         </div>
-        <div className="relative mx-auto h-[273px] w-full max-w-[560px] sm:h-[329px] md:h-[350px]">
+        <div className="relative mx-auto h-[273px] w-full max-w-[560px] xl:h-[350px]">
           <div className="absolute inset-0 rounded-[42%] bg-white/55 blur-3xl" />
-          <div className="absolute left-[4%] w-[70%] top-[-15%] sm:left-[8%]">
+          <div className="absolute left-[4%] w-[70%] top-[-15%] xl:left-[8%]">
             <CourseCard
               course={courses[0]}
               students={testimonials}
@@ -43,16 +45,16 @@ export function GrowthSection() {
           <img
             src="/hero-learner.png"
             alt={copy.hero.learnerAlt}
-            className="absolute bottom-[-30%] left-[10%] z-10 w-[700px] max-w-none drop-shadow-[0_30px_28px_rgba(15,23,42,0.28)]"
+            className="absolute bottom-[-10%] left-1/2 z-10 w-[min(105vw,560px)] max-w-none -translate-x-1/2 drop-shadow-[0_30px_28px_rgba(15,23,42,0.28)] xl:bottom-[-30%] xl:left-[10%] xl:w-[700px] xl:translate-x-0"
           />
           <LearningProgressCard
             size="large"
-            className="absolute right-0 top-[38%] z-20 w-[54%] sm:right-[-14%] sm:w-[40%]"
+            className="absolute right-0 top-[38%] z-20 w-[54%] xl:right-[-14%] xl:w-[40%]"
           />
           <svg
             aria-hidden="true"
             viewBox="0 0 120 160"
-            className="absolute right-[1%] top-[22%] z-20 h-28 w-24 rotate-6 sm:right-[-14%] sm:top-[10%] sm:h-40 sm:w-32"
+            className="absolute right-[1%] top-[22%] z-20 h-28 w-24 rotate-6 xl:right-[-14%] xl:top-[10%] xl:h-40 xl:w-32"
           >
             <path
               d="M60 12c68 0-16 25 31 38 42 12-37 21 3 36 43 16-39 19 4 43"
@@ -66,41 +68,47 @@ export function GrowthSection() {
         </div>
       </div>
       {/* Manage Courses Start */}
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-20 pt-12 md:grid-cols-2 md:px-10 md:pb-28 md:pt-20 lg:gap-20">
-        <div className="relative mx-auto h-[390px] w-full max-w-[560px] sm:h-[490px] md:h-[570px]">
+      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-20 pt-12 xl:grid-cols-2 xl:gap-20 xl:px-10 xl:pb-28 xl:pt-20">
+        <div className="relative mx-auto h-[390px] w-full max-w-[560px] xl:h-[570px]">
           <div className="absolute inset-0 rounded-full bg-blue-100/70 blur-3xl" />
-          <div className="absolute left-10 top-[2%] z-10 w-[40%] rounded-[18px] bg-blue-700 px-4 py-4 text-white shadow-lg sm:px-6 sm:py-5">
-            <span className="block text-sm sm:text-lg text-[16px]">
+          <div className="absolute left-0 top-[2%] z-2 w-[48%] rounded-[18px] bg-blue-700 px-3 py-3 text-white shadow-lg xl:left-10 xl:w-[40%] xl:px-6 xl:py-5">
+            <span className="block text-sm xl:text-lg">
               {copy.growth.revenue}
             </span>
-            <span className="block text-xs text-white/70 text-[10px]">
+            <span className="block text-[10px] text-white/70 xl:text-xs">
               {copy.growth.revenuePeriod}
             </span>
-            <b className="mt-2 block text-xl sm:text-[24px]">{copy.growth.revenueAmount}</b>
+            <b className="mt-2 block text-base xl:text-[24px]">
+              {copy.growth.revenueAmount}
+            </b>
             <div className="mt-3 h-2.5 overflow-hidden rounded-full bg-white">
               <div className="h-full w-[68%] rounded-full bg-[#ceff00]" />
             </div>
           </div>
-          <div className="absolute left-10 top-[32%] z-10 w-[25%] rounded-[18px] bg-blue-700 px-4 py-4 text-white shadow-lg sm:px-6 sm:py-5">
-            <span className="block text-[16px]">{copy.growth.yearToDate}</span>
-            <span className="block text-xs text-white/70 text-[10px]">
+          <div className="absolute  top-[38%] z-2 w-[44%] rounded-[18px] bg-blue-700 px-3 py-3 text-white shadow-lg xl:left-10 xl:right-auto xl:top-[32%] xl:w-[27%] xl:px-6 xl:py-5">
+            <span className="block text-sm xl:text-[16px]">
+              {copy.growth.yearToDate}
+            </span>
+            <span className="block text-[10px] text-white/70 xl:text-xs">
               {copy.growth.year}
             </span>
-            <b className="mt-2 block text-[24px]">{copy.growth.annualRevenue}</b>
-            <span className="mt-3 inline-block rounded-full bg-[#ceff00] px-3 py-1 text-xs font-semibold text-slate-900">
+            <b className="mt-2 block text-lg xl:text-[24px]">
+              {copy.growth.annualRevenue}
+            </b>
+            <span className="mt-2 inline-block rounded-full bg-[#ceff00] px-2 py-1 text-[10px] font-semibold text-slate-900 xl:mt-3 xl:px-3 xl:text-xs">
               {copy.growth.increase}
             </span>
           </div>
           <img
             src="/manage-courses.png"
             alt={copy.growth.creatorImageAlt}
-            className="absolute bottom-[-15%] left-[13%] z-[11] h-100%] w-[100%] object-contain object-bottom drop-shadow-[0_24px_24px_rgba(15,23,42,0.24)]"
+            className="absolute bottom-[-5%] left-[8%] z-10 h-full w-[92%] object-contain object-bottom drop-shadow-[0_24px_24px_rgba(15,23,42,0.24)] xl:bottom-[-15%] xl:left-[3%] xl:w-full xl:z-[11]"
           />
           <HappyStudentsCard className="absolute bottom-[30%] right-0 z-20" />
           <svg
             aria-hidden="true"
             viewBox="0 0 120 160"
-            className="absolute left-[63%] top-[13%] z-[12] h-36 w-28 rotate-6 sm:right-[-2%] sm:h-44 sm:w-36"
+            className="absolute left-[63%] top-[13%] z-[12] h-36 w-28 rotate-6 xl:right-[-2%] xl:h-44 xl:w-36"
           >
             <path
               d="M60 12c68 0-16 25 31 38 42 12-37 21 3 36 43 16-39 19 4 43"
@@ -113,13 +121,13 @@ export function GrowthSection() {
           </svg>
         </div>
         <div className="relative z-10">
-          <h2 className="max-w-xl text-3xl font-extrabold leading-tight tracking-tight md:text-[44px]">
+          <h2 className="max-w-xl text-3xl font-extrabold leading-tight tracking-tight xl:text-[44px]">
             {copy.growth.creatorTitle}
           </h2>
-          <p className="mt-6 max-w-xl text-base leading-7 text-slate-600 md:mt-8 md:text-[18px] md:leading-8">
+          <p className="mt-6 max-w-xl text-base leading-7 text-slate-600 xl:mt-8 xl:text-[18px] xl:leading-8">
             {copy.growth.creatorDescription}
           </p>
-          <ul className="mt-7 space-y-4 text-base md:mt-9 md:text-[18px]">
+          <ul className="mt-7 space-y-4 text-base xl:mt-9 xl:text-[18px]">
             {creatorBenefits.map((benefit) => (
               <li key={benefit} className="flex items-center gap-2">
                 <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm text-white">

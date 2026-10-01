@@ -49,7 +49,7 @@ function SocialIcon({ kind }: { kind: "facebook" | "google" }) {
 }
 
 const fieldClass =
-  "mt-[10px] h-[48px] w-full rounded-[17px] border-[1.5px] border-[#e3e4e7] px-[26px] text-[22px] text-[#222] shadow-[0_0_0_1px_#00000003] outline-none placeholder:text-[#999ca5] focus:border-[#164bff] max-[1100px]:mb-4 max-[600px]:mb-4 max-[600px]:h-[39px] max-[600px]:rounded-[13px] max-[600px]:px-4 max-[600px]:text-[17px]";
+  "mt-[10px] h-[48px] w-full rounded-[17px] border-[1.5px] border-[#e3e4e7] px-[26px] text-[22px] text-[#222] shadow-[0_0_0_1px_#00000003] outline-none placeholder:text-[#999ca5] focus:border-[#164bff] max-[1279px]:mb-4 max-[1279px]:h-[44px] max-[1279px]:rounded-[13px] max-[1279px]:px-4 max-[1279px]:text-[17px] max-[600px]:mb-4 max-[600px]:h-[39px]";
 
 export function AuthFormPanel({ mode }: { mode: "login" | "signup" }) {
   const isSignup = mode === "signup";
@@ -58,13 +58,13 @@ export function AuthFormPanel({ mode }: { mode: "login" | "signup" }) {
 
   return (
     <section
-      className="relative flex h-[min(66.4vh,850px)] min-h-[680px] max-w-[786px] items-stretch justify-center justify-self-stretch self-end mx-[clamp(18px,1.4vw,27px)] mr-[clamp(32px,8.4vw,164px)] mb-[5vh] ml-[clamp(18px,1.4vw,27px)] rounded-[32px] bg-white text-[#242529] max-[1100px]:mx-auto max-[1100px]:mb-0 max-[1100px]:h-[608px] max-[1100px]:min-h-0 max-[1100px]:w-full max-[600px]:h-auto max-[600px]:min-h-[520px] max-[600px]:rounded-[24px]"
+      className="relative flex h-[min(66.4vh,850px)] min-h-[680px] max-w-[786px] items-stretch justify-center justify-self-stretch self-end mx-[clamp(18px,1.4vw,27px)] mr-[clamp(32px,8.4vw,164px)] mb-[5vh] ml-[clamp(18px,1.4vw,27px)] rounded-[32px] bg-white text-[#242529] max-[1279px]:mx-auto max-[1279px]:mb-0 max-[1279px]:h-auto max-[1279px]:min-h-0 max-[1279px]:w-full max-[1279px]:max-w-none max-[1279px]:rounded-[24px]"
       aria-labelledby="welcome-heading"
     >
-      <div className="relative h-full w-[min(614px,calc(100%_-_112px))] pt-[67px] max-[1100px]:w-[min(614px,calc(100%_-_80px))] max-[1100px]:pt-[50px] max-[600px]:h-auto max-[600px]:w-[calc(100%_-_48px)] max-[600px]:py-6">
+      <div className="relative h-full w-[min(614px,calc(100%_-_112px))] pt-[67px] max-[1279px]:h-auto max-[1279px]:w-[min(614px,calc(100%_-_80px))] max-[1279px]:py-8 max-[600px]:w-[calc(100%_-_48px)] max-[600px]:py-6">
         <Link
           href="/"
-          className="absolute top-5 left-0 inline-flex items-center gap-2 text-[15px] text-[#164bff] no-underline hover:underline focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#164bff] max-[1100px]:static max-[1100px]:mb-5"
+          className="absolute top-5 left-0 inline-flex items-center gap-2 text-[15px] text-[#164bff] no-underline hover:underline focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#164bff] max-[1279px]:static max-[1279px]:mb-5"
         >
           <span aria-hidden="true">←</span>
           {copy.auth.backToHome}
@@ -74,7 +74,7 @@ export function AuthFormPanel({ mode }: { mode: "login" | "signup" }) {
         </p>
         <h1
           id="welcome-heading"
-          className="mt-[6px] mb-[43px] text-[clamp(42px,3.1vw,60px)] leading-[1.08] font-[750] tracking-[-1.8px] max-[1100px]:mb-6 max-[600px]:mt-[7px] max-[600px]:mb-5 max-[600px]:text-[44px] max-[600px]:tracking-[-1px]"
+          className="mt-[6px] mb-[43px] text-[clamp(42px,3.1vw,60px)] leading-[1.08] font-[750] tracking-[-1.8px] max-[1279px]:mb-6 max-[600px]:mt-[7px] max-[600px]:mb-5 max-[600px]:text-[44px] max-[600px]:tracking-[-1px]"
         >
           {isSignup ? (
             <>
@@ -146,7 +146,7 @@ export function AuthFormPanel({ mode }: { mode: "login" | "signup" }) {
                   );
                 }}
                 className="flex flex-col"
-                labelClassName="text-[18px] leading-[1.35] max-[600px]:text-[15px]"
+                labelClassName="text-[18px] leading-[1.35] max-[1279px]:text-[16px] max-[600px]:text-[15px]"
                 inputClassName={fieldClass}
               />
               {fullNameError && (
@@ -167,7 +167,7 @@ export function AuthFormPanel({ mode }: { mode: "login" | "signup" }) {
             placeholder={copy.auth.emailPlaceholder}
             autoComplete="email"
             fieldClassName="flex flex-col"
-            labelClassName="text-[18px] leading-[1.35] max-[600px]:text-[15px]"
+            labelClassName="text-[18px] leading-[1.35] max-[1279px]:text-[16px] max-[600px]:text-[15px]"
             inputClassName={fieldClass}
           />
           <div className="relative mt-[32px]">
@@ -180,13 +180,13 @@ export function AuthFormPanel({ mode }: { mode: "login" | "signup" }) {
               required
               passwordToggle
               className="flex flex-col"
-              labelClassName="mb-2 text-[18px] leading-[1.35] max-[600px]:text-[15px]"
-              inputClassName={`mb-[22px] h-[48px] w-full rounded-[17px] border-[1.5px] border-[#e3e4e7] py-0 pr-14 pl-[26px] text-[22px] text-[#222] shadow-[0_0_0_1px_#00000003] outline-none placeholder:text-[#999ca5] focus:border-[#164bff] max-[1100px]:mb-4 max-[600px]:mb-4 max-[600px]:h-[39px] max-[600px]:rounded-[13px] max-[600px]:pl-4 max-[600px]:text-[17px]`}
+              labelClassName="mb-2 text-[18px] leading-[1.35] max-[1279px]:text-[16px] max-[600px]:text-[15px]"
+              inputClassName={`mb-[22px] h-[48px] w-full rounded-[17px] border-[1.5px] border-[#e3e4e7] py-0 pr-14 pl-[26px] text-[22px] text-[#222] shadow-[0_0_0_1px_#00000003] outline-none placeholder:text-[#999ca5] focus:border-[#164bff] max-[1279px]:mb-4 max-[1279px]:h-[44px] max-[1279px]:rounded-[13px] max-[1279px]:pl-4 max-[1279px]:text-[17px] max-[600px]:mb-4 max-[600px]:h-[39px]`}
             />
           </div>
           <button
             type="submit"
-            className="mt-0 h-[43px] min-w-[99px] self-end cursor-pointer rounded-[40px] border-0 bg-[#ceff00] text-[23px] text-[#111] max-[600px]:h-[36px] max-[600px]:min-w-[84px] max-[600px]:text-[18px]"
+            className="mt-0 h-[43px] min-w-[99px] self-end cursor-pointer rounded-[40px] border-0 bg-[#ceff00] text-[23px] text-[#111] max-[1279px]:text-[18px] max-[600px]:h-[36px] max-[600px]:min-w-[84px]"
           >
             {text.submit}
           </button>
@@ -194,30 +194,30 @@ export function AuthFormPanel({ mode }: { mode: "login" | "signup" }) {
 
         {!isSignup && (
           <>
-            <div className="absolute top-[69%] right-0 left-0 flex items-center gap-4 text-[20px] text-[#999] max-[1100px]:top-[68%] max-[600px]:static max-[600px]:mt-7">
+            <div className="absolute top-[69%] right-0 left-0 flex items-center gap-4 text-[20px] text-[#999] max-[1279px]:static max-[1279px]:mt-7 max-[1279px]:text-base">
               <span className="h-px flex-1 bg-[#d8d8d8]" />
               <span>{copy.auth.or}</span>
               <span className="h-px flex-1 bg-[#d8d8d8]" />
             </div>
-            <div className="absolute top-[76%] right-0 left-0 flex justify-center gap-[22px] max-[1100px]:top-[76%] max-[600px]:static max-[600px]:mt-5">
+            <div className="absolute top-[76%] right-0 left-0 flex justify-center gap-[22px] max-[1279px]:static max-[1279px]:mt-5">
               <button
                 type="button"
                 aria-label={copy.auth.facebookLabel}
-                className="grid h-[69px] w-[69px] cursor-pointer place-items-center rounded-[23px] border-[1.5px] border-[#d6d6d6] bg-white text-black max-[600px]:h-[48px] max-[600px]:w-[48px] max-[600px]:rounded-[16px]"
+                className="grid h-[69px] w-[69px] cursor-pointer place-items-center rounded-[23px] border-[1.5px] border-[#d6d6d6] bg-white text-black max-[1279px]:h-[52px] max-[1279px]:w-[52px] max-[1279px]:rounded-[16px]"
               >
                 <SocialIcon kind="facebook" />
               </button>
               <button
                 type="button"
                 aria-label={copy.auth.googleLabel}
-                className="grid h-[69px] w-[69px] cursor-pointer place-items-center rounded-[23px] border-[1.5px] border-[#d6d6d6] bg-white text-black max-[600px]:h-[48px] max-[600px]:w-[48px] max-[600px]:rounded-[16px]"
+                className="grid h-[69px] w-[69px] cursor-pointer place-items-center rounded-[23px] border-[1.5px] border-[#d6d6d6] bg-white text-black max-[1279px]:h-[52px] max-[1279px]:w-[52px] max-[1279px]:rounded-[16px]"
               >
                 <SocialIcon kind="google" />
               </button>
             </div>
           </>
         )}
-        <p className="absolute right-0 bottom-[5.2%] left-0 m-0 text-center text-[16px] text-[#999] max-[600px]:static max-[600px]:mt-6 max-[600px]:text-[16px]">
+        <p className="absolute right-0 bottom-[5.2%] left-0 m-0 text-center text-[16px] text-[#999] max-[1279px]:static max-[1279px]:mt-6">
           {text.prompt}{" "}
           <Link
             href={isSignup ? "/login" : "/signup"}

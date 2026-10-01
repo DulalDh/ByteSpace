@@ -2,17 +2,17 @@ import { copy } from "@/data/home-data.js";
 
 export function CreatorCtaSection() {
   return (
-    <section className="relative isolate flex min-h-[400px] items-center overflow-hidden bg-[#073fe5] bg-[linear-gradient(#ffffff18_1px,transparent_1px),linear-gradient(90deg,#ffffff18_1px,transparent_1px)] bg-[size:136px_136px] px-5 py-12 text-center text-white md:min-h-[496px]">
-      <div className="relative z-10 mx-auto -mt-1 max-w-6xl">
-        <h2 className="mx-auto max-w-4xl text-[24px] font-extrabold leading-[1.2] tracking-[-0.035em] sm:text-[30px] md:text-[44px]">
+    <section className="relative isolate flex min-h-[360px] items-center overflow-hidden bg-[#073fe5] bg-[linear-gradient(#ffffff18_1px,transparent_1px),linear-gradient(90deg,#ffffff18_1px,transparent_1px)] bg-[size:136px_136px] px-4 py-14 text-center text-white md:px-8 xl:min-h-[496px] xl:px-5 xl:py-12">
+      <div className="relative z-20 mx-auto max-w-6xl">
+        <h2 className="mx-auto max-w-4xl text-[clamp(23px,6vw,34px)] font-extrabold leading-[1.2] tracking-[-0.035em] xl:text-[44px]">
           {copy.creatorCta.title}
         </h2>
-        <p className="mx-auto mt-6 max-w-[1120px] text-[12px] leading-[1.65] text-white/90 sm:text-[14px] md:text-[18px]">
+        <p className="mx-auto mt-4 max-w-[800px] text-sm leading-[1.65] text-white/90 xl:mt-6 xl:max-w-[1120px] xl:text-[18px]">
           {copy.creatorCta.description}
         </p>
         <a
           href="#footer"
-          className="mt-8 inline-flex min-h-[46px] items-center justify-center rounded-full bg-[#ceff00] px-[26px] text-[16px] font-medium text-slate-900 transition-colors hover:bg-[#dcff45] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+          className="mt-6 inline-flex min-h-[46px] items-center justify-center rounded-full bg-[#ceff00] px-6 text-[15px] font-medium text-slate-900 transition-colors hover:bg-[#dcff45] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white xl:mt-8 xl:px-[26px] xl:text-base"
         >
           {copy.creatorCta.button}
         </a>
@@ -21,7 +21,7 @@ export function CreatorCtaSection() {
       {/* Oversized abstract forms frame the text without competing with it. */}
       <svg
         aria-hidden="true"
-        className="pointer-events-none absolute -left-12 -top-8 h-44 w-52 text-[#ceff00] sm:-left-12 sm:h-48 sm:w-[216px]"
+        className="pointer-events-none absolute -left-12 -top-8 hidden h-44 w-52 text-[#ceff00] xl:-left-12 xl:block xl:h-48 xl:w-[216px]"
         viewBox="0 0 320 280"
         fill="none"
       >
@@ -47,7 +47,7 @@ export function CreatorCtaSection() {
 
       <svg
         aria-hidden="true"
-        className="pointer-events-none absolute -right-10 top-4 h-36 w-44 text-[#ceff00] sm:right-[13%] sm:top-6 sm:h-40 sm:w-44"
+        className="pointer-events-none absolute -right-10 top-4 hidden h-36 w-44 text-[#ceff00] xl:right-[13%] xl:top-6 xl:block xl:h-40 xl:w-44"
         viewBox="0 0 260 220"
       >
         <path
@@ -65,7 +65,7 @@ export function CreatorCtaSection() {
 
       <svg
         aria-hidden="true"
-        className="pointer-events-none absolute -left-10 top-[49%] h-48 w-40 text-white sm:-left-6 sm:h-52 sm:w-44"
+        className="pointer-events-none absolute -left-10 top-[49%] hidden h-48 w-40 text-white xl:-left-6 xl:block xl:h-52 xl:w-44"
         viewBox="0 0 200 250"
       >
         <path
@@ -76,7 +76,7 @@ export function CreatorCtaSection() {
 
       <svg
         aria-hidden="true"
-        className="pointer-events-none absolute -right-6 top-[8%] h-[304px] w-44 text-white sm:-right-8 sm:h-[328px] sm:w-48"
+        className="pointer-events-none absolute -right-6 top-[8%] hidden h-[304px] w-44 text-white xl:-right-8 xl:block xl:h-[328px] xl:w-48"
         viewBox="0 0 290 480"
       >
         <path
@@ -87,7 +87,7 @@ export function CreatorCtaSection() {
 
       <svg
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-24 left-[5%] h-52 w-[230px] text-[#ceff00] sm:left-[5%] sm:h-[230px] sm:w-64"
+        className="pointer-events-none absolute -bottom-24 left-[5%] hidden h-52 w-[230px] text-[#ceff00] xl:left-[5%] xl:block xl:h-[230px] xl:w-64"
         viewBox="0 0 380 310"
         fill="none"
       >
@@ -101,7 +101,7 @@ export function CreatorCtaSection() {
 
       <svg
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-20 -right-5 h-52 w-[230px] text-[#ceff00] sm:-right-8 sm:h-[230px] sm:w-64"
+        className="pointer-events-none absolute -bottom-20 -right-5 hidden h-52 w-[230px] text-[#ceff00] xl:-right-8 xl:block xl:h-[230px] xl:w-64"
         viewBox="0 0 380 320"
         fill="none"
       >
@@ -116,7 +116,7 @@ export function CreatorCtaSection() {
 
       <svg
         aria-hidden="true"
-        className="pointer-events-none absolute left-[14%] top-[7%] h-32 w-[115px] text-white sm:left-[15%] sm:top-[6%] sm:h-[140px] sm:w-32"
+        className="pointer-events-none absolute left-[14%] top-[7%] hidden h-32 w-[115px] text-white xl:left-[15%] xl:top-[6%] xl:block xl:h-[140px] xl:w-32"
         viewBox="0 0 170 210"
         fill="none"
       >

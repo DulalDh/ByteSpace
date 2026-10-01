@@ -5,7 +5,7 @@ export function TestimonialsSection() {
   return (
     <section
       id="creators"
-      className="px-6 py-16 sm:px-10 md:px-14 md:py-20 xl:px-[5%] xl:py-[112px]"
+      className="px-4 py-12 sm:px-10 sm:py-16 md:px-14 md:py-20 xl:px-[5%] xl:py-[112px]"
       style={{
         background:
           "radial-gradient(ellipse at 14% 20%, #eaff91 0, transparent 35%), radial-gradient(ellipse at 88% 19%, #e2e8ff 0, transparent 39%), radial-gradient(ellipse at 38% 100%, #e8ecff 0, transparent 49%), #fafbf8",
@@ -24,7 +24,7 @@ export function TestimonialsSection() {
           {testimonials.map((item, index) => (
             <article
               key={`${item.name}-${index}`}
-              className="min-h-[350px] rounded-[24px] border border-slate-200/50 bg-white p-7 shadow-[0_2px_4px_rgba(15,23,42,0.12)] sm:p-8 lg:min-h-[445px] lg:p-[35px]"
+              className="min-h-0 rounded-[24px] border border-slate-200/50 bg-white p-5 shadow-[0_2px_4px_rgba(15,23,42,0.12)] sm:min-h-[350px] sm:p-8 lg:min-h-[445px] lg:p-[35px]"
             >
               <RemoteImage
                 imageId={item.avatar}

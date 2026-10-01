@@ -53,18 +53,18 @@ export function LearningPathsSection() {
         <h2 className="text-2xl font-extrabold tracking-tight md:text-[44px]">
           {copy.learningPaths.title}
         </h2>
-        <p className="mt-3 text-[18px] leading-6 text-slate-400">
+        <p className="mt-3 text-base leading-6 text-slate-400 sm:text-[18px]">
           {copy.learningPaths.description}
         </p>
       </div>
-      <div className="mt-16 grid grid-cols-2 gap-9 sm:grid-cols-3 lg:grid-cols-6">
+      <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-16 sm:grid-cols-3 sm:gap-6 lg:grid-cols-6 lg:gap-9">
         {learningPaths.map(({ title }) => (
           <a
             key={title}
             href="#courses"
-            className="flex min-h-40 flex-col items-center justify-center gap-3 rounded-2xl border border-slate-200 bg-white transition hover:-translate-y-1 hover:shadow-lg"
+            className="flex min-h-32 flex-col items-center justify-center gap-3 rounded-2xl border border-slate-200 bg-white transition hover:-translate-y-1 hover:shadow-lg sm:min-h-40"
           >
-            <span className="flex h-16 w-16 items-center justify-center rounded-full bg-[#ceff00]">
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#ceff00] sm:h-16 sm:w-16">
               <svg
                 aria-hidden="true"
                 viewBox="0 0 24 24"
@@ -73,12 +73,12 @@ export function LearningPathsSection() {
                 strokeWidth="2.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="h-8 w-8 text-[#292929]"
+                className="h-6 w-6 text-[#292929] sm:h-8 sm:w-8"
               >
                 {learningPathIcons[title]}
               </svg>
             </span>
-            <span className="text-lg font-medium">{title}</span>
+            <span className="text-sm font-medium sm:text-lg">{title}</span>
           </a>
         ))}
       </div>
