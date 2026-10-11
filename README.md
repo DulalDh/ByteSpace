@@ -2,6 +2,10 @@
 
 Course discovery landing page built with Next.js, React, and TypeScript.
 
+## Live site
+
+[https://byte-space-taupe.vercel.app/](https://byte-space-taupe.vercel.app/)
+
 ## Run locally
 
 ```bash
